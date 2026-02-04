@@ -1,0 +1,278 @@
+.collectionsPage {
+  padding-top: 80px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--color-primary-bg);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Collections */
+.collections {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-white);
+}
+
+.collectionItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.collectionItem:first-child {
+  padding-top: 0;
+}
+
+.collectionItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reversed {
+  direction: rtl;
+}
+
+.reversed > * {
+  direction: ltr;
+}
+
+.collectionContent h2 {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-family: var(--font-subheading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 24px;
+}
+
+.features,
+.highlights {
+  margin-bottom: 24px;
+}
+
+.features li,
+.highlights li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.features li::before,
+.highlights li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.collectionImage {
+  display: block;
+  transition: transform var(--transition-default);
+}
+
+.collectionImage:hover {
+  transform: scale(1.02);
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.meta span:nth-child(2) {
+  color: var(--color-accent-pink);
+}
+
+/* Add-ons */
+.addOns {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-light-pink);
+}
+
+.addOnsHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.addOnsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.addOnCard {
+  background-color: var(--color-white);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.addOnCard h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 12px;
+}
+
+.addOnCard p {
+  font-size: 0.9375rem;
+}
+
+.addOnPrice {
+  font-family: var(--font-subheading);
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.addOnsSubtext {
+  color: var(--color-text-secondary);
+  max-width: 450px;
+  margin: 16px auto 0;
+}
+
+/* Booking Terms */
+.bookingTerms {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-cream);
+}
+
+.termsContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.termsContent h2 {
+  margin-bottom: 32px;
+}
+
+.termsList {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.termsList li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.termsList li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+/* Custom CTA */
+.customCta {
+  padding: var(--section-padding-y) 0;
+  background: linear-gradient(135deg, var(--color-primary-bg) 0%, var(--color-gold) 100%);
+  text-align: center;
+}
+
+.customCta h2 {
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.customCta p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.customCta a {
+  background-color: var(--color-white);
+  color: var(--color-gold);
+  border-color: var(--color-white);
+}
+
+.customCta a:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  border-color: var(--color-charcoal);
+}
+
+@media (max-width: 1199px) {
+  .collectionItem {
+    gap: 48px;
+  }
+
+  .addOnsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 var(--section-padding-x-mobile);
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .collections,
+  .addOns,
+  .bookingTerms,
+  .customCta {
+    padding: var(--section-padding-y-mobile) 0;
+  }
+
+  .collectionItem {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 0;
+  }
+
+  .reversed {
+    direction: ltr;
+  }
+
+  .addOnsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .termsList li {
+    font-size: 0.9375rem;
+  }
+}

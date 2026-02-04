@@ -1,0 +1,505 @@
+/* Header Container */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: box-shadow var(--transition-default);
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar */
+.topBar {
+  background-color: var(--color-primary-bg);
+  border-bottom: 1px solid #FFE5E5;
+  height: 100px;
+  transition: height var(--transition-default);
+}
+
+.header.scrolled .topBar {
+  height: 80px;
+
+}
+
+.topBarContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socialIcons a {
+  color: #FFB5D5;
+  /* Light pink/rose */
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.socialIcons a:hover {
+  color: var(--color-gold);
+  transform: scale(1.1);
+}
+
+.socialIcons svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+  /* Fill top bar height */
+  transition: transform var(--transition-default);
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.85;
+  /* Tight stacking */
+}
+
+/* Shared Logo Styles */
+.logoLuxe,
+.logoPlay {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+
+/* LUXE: Thick (Black/ExtraBold) */
+.logoLuxe {
+  font-weight: 900;
+}
+
+/* PLAY: Thinner (~55% less visual weight -> Medium) */
+.logoPlay {
+  font-weight: 500;
+}
+
+.header.scrolled .logoLuxe,
+.header.scrolled .logoPlay {
+  font-size: 32px;
+}
+
+/* Header CTA */
+.headerCta {
+  display: flex;
+  align-items: center;
+}
+
+.bookNowBtn {
+  background: linear-gradient(90deg, #FFFFFF, #FFF9F0);
+  /* White -> Light Cream */
+  color: #2C2C2C;
+  /* Dark text for contrast against light btn */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  padding: 12px 32px;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-shadow: none;
+  border: 1px solid #FFE5E5;
+  /* Subtle border to pop */
+}
+
+.bookNowBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+.navBar {
+  background-color: rgba(248, 218, 218, 0.95);
+  /* #F8DADA with 95% opacity */
+  height: 60px;
+  transition: height var(--transition-default);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ... existing code ... */
+
+.dropdownLink:hover {
+  background-color: var(--color-secondary-pink);
+  color: var(--color-white);
+  /* Assuming white text on darker pink */
+}
+
+.header.scrolled .navBar {
+  height: 48px;
+}
+
+.navBarContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centered navigation menu */
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2C2C2C;
+  /* Charcoal */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition-fast);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transition: width var(--transition-default);
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+  /* Keep text charcoal on hover per request, or gold? Request says "active page: Gold text color", "On hover: Gold underline". */
+}
+
+/* Re-reading: "On hover: Gold underline (#D4AF37), 2px thick". "Active page: Gold text color". 
+   Previous code changed color to gold on hover. I will remove the color change on hover to match "Gold underline" instruction strictly, allow color change only if active (which I can't check easily without router). 
+   However, usually hover also changes color. I'll stick to just underline for now or keep slight color shift if preferred.
+   Let's keep color change for better feedback, as "Active page" implies permanence.
+*/
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.hasDropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  min-width: 200px;
+  border-radius: var(--border-radius-small);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+  padding: 8px 0;
+  margin-top: 8px;
+  list-style: none;
+  z-index: 1001;
+  /* Above other content */
+}
+
+.dropdownOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 12px 20px;
+  font-family: var(--font-subheading);
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dropdownLink:hover {
+  background-color: var(--color-light-pink);
+  color: var(--color-gold);
+  /* Pink hover as requested */
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  padding: 8px;
+  color: var(--color-text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* Full width or max 400? Request says "Slide in from right". */
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay */
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform var(--transition-default);
+}
+
+.mobileNavContentWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNav.mobileNavOpen {
+  transform: translateX(0);
+  display: block;
+}
+
+.mobileNavContent {
+  padding: 80px 24px 32px;
+  /* Top padding to avoid close button overlap */
+}
+
+/* Mobile Close Button */
+.mobileCloseBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+.mobileSocialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #FFE5E5;
+  margin-bottom: 24px;
+}
+
+.mobileSocialIcons a {
+  color: var(--color-accent-pink);
+  transition: color var(--transition-fast);
+}
+
+.mobileSocialIcons a:hover {
+  color: var(--color-gold);
+}
+
+.mobileSocialIcons svg {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileNavList>li {
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0;
+  font-family: var(--font-subheading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobileNavLink svg {
+  transition: transform var(--transition-fast);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.mobileSubmenu {
+  list-style: none;
+  padding-left: 16px;
+  padding-bottom: 8px;
+}
+
+.mobileSubmenu li {
+  padding: 8px 0;
+}
+
+.mobileSubmenu a {
+  font-family: var(--font-subheading);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.mobileSubmenu a:hover {
+  color: var(--color-gold);
+}
+
+.mobileBookNow {
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+  padding: 16px;
+  background: linear-gradient(90deg, #FFB5D5, #FFE5B4, #C8E6C9, #B3D9FF);
+  color: var(--color-white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 24px;
+  text-shadow: none;
+}
+
+/* Tablet Styles */
+@media (max-width: 1199px) {
+  .navList {
+    gap: 32px;
+  }
+
+  .topBarContainer,
+  .navBarContainer {
+    padding: 0 var(--section-padding-x);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .topBar {
+    height: 80px;
+  }
+
+  .header.scrolled .topBar {
+    height: 60px;
+  }
+
+  .topBarContainer {
+    padding: 0 var(--section-padding-x-mobile);
+  }
+
+  .socialIcons {
+    display: none;
+  }
+
+  /* Hide Desktop Nav */
+  .navBar {
+    display: none;
+  }
+
+  /* Show Mobile Menu Button */
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Adjust Book Now for Mobile - smaller */
+  .headerCta {
+    margin-right: 16px;
+  }
+
+  .bookNowBtn {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .mobileNav {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ensure overlay */
+    top: 0;
+    /* Header is sticky, so this covers full screen? Yes */
+  }
+
+  /* Logo text resizing for mobile */
+  .logoLuxe,
+  .logoPlay {
+    font-size: 32px;
+  }
+
+  .header.scrolled .logoLuxe,
+  .header.scrolled .logoPlay {
+    font-size: 24px;
+  }
+}

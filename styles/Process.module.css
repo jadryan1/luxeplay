@@ -1,0 +1,138 @@
+.process {
+  background: linear-gradient(
+    180deg,
+    var(--color-light-pink) 0%,
+    var(--color-accent-pink) 100%
+  );
+  padding: var(--section-padding-y) 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header h2 {
+  margin-bottom: 16px;
+}
+
+.subtext {
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  color: var(--color-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper svg {
+  width: 36px;
+  height: 36px;
+}
+
+.stepTitle {
+  font-family: var(--font-subheading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.stepDescription {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+.connector {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-gold);
+  opacity: 0.4;
+}
+
+@media (max-width: 1199px) {
+  .timeline {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .step {
+    flex: 0 0 33.33%;
+    padding: 0;
+  }
+
+  .connector {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .process {
+    padding: var(--section-padding-y-mobile) 0;
+  }
+
+  .container {
+    padding: 0 var(--section-padding-x-mobile);
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iconWrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .iconWrapper svg {
+    width: 28px;
+    height: 28px;
+  }
+}
