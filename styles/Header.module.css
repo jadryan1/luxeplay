@@ -457,6 +457,18 @@
 
   .topBarContainer {
     padding: 0 var(--section-padding-x-mobile);
+    position: relative;
+    justify-content: flex-end;
+    /* Menu button on the right */
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .socialIcons {
@@ -473,16 +485,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 10;
   }
 
-  /* Adjust Book Now for Mobile - smaller */
+  /* Remove Book Now for Mobile */
   .headerCta {
-    margin-right: 16px;
-  }
-
-  .bookNowBtn {
-    padding: 8px 16px;
-    font-size: 0.75rem;
+    display: none;
   }
 
   .mobileNav {
