@@ -14,24 +14,24 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: "Safety First",
+    title: "Curated Environments",
     description:
-      "Every piece of equipment meets the highest safety standards. We're fully insured and licensed in NYC.",
+      "Spaces that invite boundless imagination while maintaining flawless, showroom-ready presentation.",
   },
   {
-    title: "Pristine Cleanliness",
+    title: "Seamless Aesthetics",
     description:
-      "Hospital-grade sanitization and individual ball washing ensure every event is spotlessly clean.",
+      "Neutral palettes and modern silhouettes designed to elevate, rather than compete with, your event's atmosphere.",
   },
   {
-    title: "Aesthetic Excellence",
+    title: "Bespoke Service",
     description:
-      "Our collections are designed to complement, never clash with, the most sophisticated event spaces.",
+      "From initial vision to final installation, we handle every detail so your only job is to celebrate.",
   },
   {
-    title: "White-Glove Service",
+    title: "Uncompromising Details",
     description:
-      "From consultation to cleanup, we handle everything so you can focus on what matters most.",
+      "Outfitted with the finest, thoughtfully sourced materials for a truly boutique playtime experience.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <Eyebrow>OUR STORY</Eyebrow>
             <h1>Creating Magic, One Event at a Time</h1>
             <p className={styles.heroSubtitle}>
-              Manhattan&apos;s premier luxury soft play rental company, founded by a
+              The tri-state area&apos;s premier luxury soft play rental company, founded by a
               mom who knew there had to be a better way.
             </p>
           </div>
@@ -66,24 +66,21 @@ export default function AboutPage() {
               <div className={styles.storyContent}>
                 <h2>The Beginning</h2>
                 <p>
-                  Luxe Play NY was born from a simple frustration: finding party
-                  rentals that matched the aesthetic of a Manhattan home. As a
-                  mother planning my daughter&apos;s first birthday in our Upper East
-                  Side apartment, I searched everywhere for soft play equipment
-                  that was beautiful, safe, and clean.
+                  Luxe Play NY was born from a desire for something better. As a
+                  mother planning celebrated moments in the tri-state area, I searched for
+                  play experiences that matched the elegance of our home. I wanted
+                  joy without the visual compromise.
                 </p>
                 <p>
-                  What I found were primary-colored ball pits that clashed with
-                  everything, equipment of questionable cleanliness, and service
-                  that left much to be desired. I knew other parents must feel
-                  the same way—and Luxe Play NY was born.
+                  What began as a personal pursuit quickly evolved into a definitive
+                  standard. Today, we curate play spaces for the city&apos;s most
+                  discerning families, delivering environments that engage children
+                  and delight parents.
                 </p>
                 <p>
-                  Today, we serve Manhattan&apos;s most discerning families, from
-                  celebrity birthdays to intimate milestone celebrations. Every
-                  setup is treated as if it were for my own child, because I
-                  understand what matters most: creating magical moments in
-                  spaces you&apos;re proud of.
+                  Every landscape we create is treated as a masterpiece. We understand
+                  what matters most: creating magical, uninhibited moments in spaces
+                  you are proud to share.
                 </p>
               </div>
             </div>
@@ -115,13 +112,13 @@ export default function AboutPage() {
               <Eyebrow>OUR MISSION</Eyebrow>
               <h2>Luxury Should Never Mean Compromise</h2>
               <p>
-                We believe that beautiful design, rigorous safety standards, and
-                pristine cleanliness should come standard—not as a premium
-                add-on. Our mission is to provide Manhattan families with party
-                rentals that are worthy of their celebrations and their homes.
+                We believe a high-end celebration shouldn&apos;t pause for playtime.
+                Our mission is to provide tri-state area families with flawlessly designed
+                play landscapes. Experiences worthy of your most cherished milestones
+                and sophisticated spaces.
               </p>
               <Button variant="primary" href="/contact">
-                Work With Us
+                Start Planning
               </Button>
             </div>
           </div>

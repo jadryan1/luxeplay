@@ -9,9 +9,9 @@ const faqItems = [
       "We recommend booking at least 2-3 weeks in advance for weekday events and 4-6 weeks for weekend events, especially during peak season (spring and fall). For holiday weekends and December events, we suggest booking 2-3 months ahead. However, we always try to accommodate last-minute requests when our schedule allows.",
   },
   {
-    question: "Do you service all of Manhattan and surrounding areas?",
+    question: "What is your service area?",
     answer:
-      "Yes! We proudly serve all of Manhattan, as well as Brooklyn, Queens, and the Bronx. We also offer service to Westchester and Long Island for an additional travel fee. Our team is familiar with building requirements and logistics throughout the NYC area.",
+      "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania — anywhere within a 3-hour radius of Fairfield, NJ.",
   },
   {
     question: "What's included in the rental?",
@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "Can you match my event's color scheme?",
     answer:
-      "Absolutely! Our collections feature neutral and pastel palettes that complement most event aesthetics. We offer various ball pit color options including all-white, blush pink, sage green, and custom mixes. During your consultation, we'll discuss your vision and recommend the perfect combination.",
+      "Absolutely! Our packages feature neutral and pastel palettes that complement most event aesthetics. We offer various ball pit color options including all-white, blush pink, sage green, and custom mixes. During your consultation, we'll discuss your vision and recommend the perfect combination.",
   },
   {
     question: "What are your cancellation policies?",

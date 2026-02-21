@@ -2,28 +2,19 @@
 
 ## Typography
 
-### **Playfair Display**
-*Serif, Elegant*
-- **Usage Example**: 
-  - Main Logo ("Luxe Play" text)
-  - Hero Headline ("Let's Have a Ball!")
-  - Section Headings ("Luxury Play Experiences")
-  - `h1`, `h2`, `h3` global headings
- 
-### **Montserrat**
-*Sans-serif, Geometric*
-- **Usage Example**: 
-  - Subheadlines ("add a touch of magic to your event")
-  - Navigation Menu Items ("HOME", "ABOUT US")
-  - Buttons ("BOOK NOW", "I'M READY!")
-  - Eyebrow Text ("WELCOME TO LUXE PLAY NY")
-  - Taglines
+### **Raleway** *(Google Fonts — the only font family used)*
 
-### **Inter**
-*Sans-serif, Clean*
-- **Usage Example**: 
-  - Body Paragraphs (Hero description, Introduction text)
-  - General long-form content
+| Role | Weight | Style |
+|---|---|---|
+| Display / Hero callouts | ExtraLight (200) | Large size, uppercase, wide `letter-spacing` |
+| H1 — Large Headings | SemiBold (600) | Uppercase, wide `letter-spacing` |
+| H2 — Secondary Headings | Regular (400) | Uppercase, tracked `letter-spacing` |
+| H3 — Subheadings | Regular (400) | Smaller size, uppercase, wide `letter-spacing` |
+| Body Copy | Regular (400) | Normal `letter-spacing`, mixed case |
+
+- All headings are uppercase with generous letter-spacing
+- Body copy is mixed case for readability
+- Overall feel: minimal, soft, and elevated
 
 ---
 

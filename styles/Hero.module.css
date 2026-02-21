@@ -1,213 +1,122 @@
+/* Full-Viewport Hero */
 .hero {
-  background-color: #F8DADA;
-  /* Pink background */
-  min-height: 600px;
-  /* Use min-height to avoid overflow */
-  padding-top: 180px;
-  /* Account for fixed header (80px + extra) */
-  padding-bottom: 60px;
-  display: flex;
-  align-items: center;
-  /* Vertically center content if height allows */
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--section-padding-x);
-  width: 100%;
-}
-
-.splitLayout {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-/* Left Side - Text Content */
-.textContent {
-  flex: 1;
-  max-width: 50%;
-}
-
-.eyebrow {
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #D4AF37;
-  /* Gold */
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 72px;
-  line-height: 1.1;
-  color: #2C2C2C;
-  /* Charcoal */
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-.subheadline {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-style: italic;
-  color: #927474;
-  /* Medium Gray */
-  margin-bottom: 8px;
-  font-weight: 400;
-}
-
-.tagline {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #2C2C2C;
-  /* Charcoal */
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.bodyText {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #2C2C2C;
-  margin-bottom: 32px;
-  max-width: 90%;
-}
-
-/* CTA Button */
-.ctaWrapper {
-  margin-top: 32px;
-}
-
-.heroBtn {
-  display: inline-block;
-  background: linear-gradient(90deg, #FFFFFF, #FFF9F0);
-  color: #2C2C2C;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 16px 48px;
-  border-radius: 24px;
-  /* Pill shape - might need more if huge? 24px is fine */
-  text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  border: 1px solid #FFE5E5;
-  text-shadow: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.heroBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Right Side - Image */
-.imageContent {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.imagePlaceholderBox {
-  width: 600px;
-  height: 600px;
-  background-color: #000000;
-  /* Black box placeholder */
-  border-radius: 16px;
-  overflow: hidden;
-  /* For inner image rounding */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
+  width: 100vw;
+  height: calc(100vh - 160px);
+  margin-top: 160px;
+  min-height: 600px;
+  overflow: hidden;
 }
 
+/* Background Image */
 .heroImage {
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+  z-index: 0;
 }
 
-/* Mobile Responsive */
+/* Brand-Tinted Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 203, 226, 0.25);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Text Content — Bottom Left */
+.content {
+  position: absolute;
+  bottom: 80px;
+  left: var(--section-padding-x);
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: block;
+  font-family: var(--font-raleway);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+}
+
+/* Headline — Display/Hero weight */
+.headline {
+  font-family: var(--font-raleway);
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Subheading */
+.heroSubheading {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  max-width: 540px;
+  font-weight: 300;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ghost / Outline CTA Button */
+.ctaBtn {
+  display: inline-block;
+  font-family: var(--font-raleway);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 16px 48px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+
 @media (max-width: 991px) {
   .headline {
-    font-size: 56px;
-  }
-
-  .imagePlaceholderBox {
-    width: 100%;
-    height: 400px;
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 767px) {
   .hero {
     min-height: 500px;
-    /* Mobile height requirement */
-    padding-top: 100px;
-    /* Header is 70px/80px */
-    display: block;
-    /* Stack */
   }
 
-  .splitLayout {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .textContent {
-    max-width: 100%;
-    text-align: center;
-    /* Usually centered on mobile looks better, but request didn't specify alignment for mobile text. "stack on mobile". I'll default to left aligned or center? 
-    "Left Side - Text Content" -> "Center aligned" is mentioned for "SERVICES PREVIEW SECTION" but not explicitly for Hero. 
-    However, 50/50 split usually implies matching alignment. 
-    Let's keep left alignment for now as it's standard unless centered is requested.
-    Actually, let's Check: "Split: 50/50 text/image on desktop, stack on mobile".
-    I will keep text left aligned on mobile too for consistency, or maybe center for "Let's Have a Ball!".
-    Let's leave it default (left).
-    */
-    text-align: center;
-    /* Center aligning on mobile is generally safer for "Have a Ball" vibes */
-  }
-
-  .eyebrow {
-    letter-spacing: 1px;
+  .content {
+    bottom: 60px;
+    left: var(--section-padding-x-mobile);
+    right: var(--section-padding-x-mobile);
   }
 
   .headline {
-    font-size: 48px;
-    /* Mobile size requirement */
+    font-size: 2.75rem;
   }
 
-  .subheadline {
-    font-size: 20px;
-  }
-
-  .bodyText {
-    max-width: 100%;
-  }
-
-  .imageContent {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .imagePlaceholderBox {
-    width: 100%;
-    height: 350px;
-    /* Adjust height for mobile stack */
-    border-radius: 16px;
-  }
-
-  .container {
-    padding: 0 var(--section-padding-x-mobile);
+  .ctaBtn {
+    padding: 14px 36px;
+    font-size: 0.8125rem;
   }
 }

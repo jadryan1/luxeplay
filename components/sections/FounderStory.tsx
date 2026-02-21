@@ -16,19 +16,19 @@ export default function FounderStory() {
         <div className={styles.content}>
           <Eyebrow>MEET THE FOUNDER</Eyebrow>
           <h2 className={styles.title}>
-            From Manhattan Mom to Luxury Play Curator
+            From Tri-State Area Mom to Luxury Play Curator
           </h2>
           <div className={styles.body}>
             <p>
               Hi! I&apos;m [Founder Name], and I started Luxe Play NY because I
               couldn&apos;t find party rentals that matched the aesthetic of my
-              Manhattan home and lifestyle. As a mother hosting events in our
+              tri-state area home and lifestyle. As a mother hosting events in our
               [neighborhood] apartment, I knew there had to be a better
               way—beautiful equipment that&apos;s safe, clean, and sophisticated.
             </p>
             <p>
               What began as a personal frustration became a mission: to provide
-              Manhattan families with party rentals worthy of their
+              tri-state area families with party rentals worthy of their
               celebrations. Today, we&apos;re proud to serve the city&apos;s most
               discerning hosts, from celebrity events to intimate family
               gatherings.

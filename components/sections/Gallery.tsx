@@ -22,7 +22,7 @@ export default function Gallery() {
           <Eyebrow>RECENT EVENTS</Eyebrow>
           <h2>Styled to Perfection</h2>
           <p className={styles.subtext}>
-            See how we transform Manhattan&apos;s most exclusive venues
+            See how we transform the tri-state area&apos;s most exclusive venues
           </p>
         </div>
         <div className={styles.grid}>

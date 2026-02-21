@@ -1,5 +1,5 @@
 .founderStory {
-  background-color: var(--color-primary-bg);
+  background-color: var(--color-section-break);
   padding: var(--section-padding-y) 0;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .signature {
-  font-family: var(--font-heading);
+  font-family: var(--font-raleway);
   font-size: 1.25rem;
   font-style: italic;
   color: var(--color-text-primary);

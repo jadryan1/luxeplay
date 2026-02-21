@@ -5,7 +5,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: box-shadow var(--transition-default);
+  transition: box-shadow var(--transition-default), transform 0.4s ease;
+}
+
+.header.hidden {
+  transform: translateY(-100%);
 }
 
 .header.scrolled {
@@ -14,8 +18,8 @@
 
 /* Top Bar */
 .topBar {
-  background-color: var(--color-primary-bg);
-  border-bottom: 1px solid #FFE5E5;
+  background-color: rgba(253, 203, 226, 0.92);
+  border-bottom: 1px solid rgba(253, 203, 226, 0.6);
   height: 100px;
   transition: height var(--transition-default);
 }
@@ -43,8 +47,7 @@
 }
 
 .socialIcons a {
-  color: #FFB5D5;
-  /* Light pink/rose */
+  color: var(--color-text-primary);
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
@@ -54,7 +57,7 @@
 }
 
 .socialIcons a:hover {
-  color: var(--color-gold);
+  color: var(--color-text-secondary);
   transform: scale(1.1);
 }
 
@@ -88,7 +91,7 @@
 .logoPlay {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
-  color: #FFFFFF;
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1;
@@ -115,39 +118,34 @@
   align-items: center;
 }
 
-.bookNowBtn {
-  background: linear-gradient(90deg, #FFFFFF, #FFF9F0);
-  /* White -> Light Cream */
-  color: #2C2C2C;
-  /* Dark text for contrast against light btn */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+.ctaButton {
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-raleway);
+  font-size: 12px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0;
+  letter-spacing: 0.12em;
   padding: 12px 32px;
-  border-radius: 24px;
+  border-radius: 50px;
+  border: 1px solid #C4909A;
   text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  text-shadow: none;
-  border: 1px solid #FFE5E5;
-  /* Subtle border to pop */
+  transition: all 0.3s ease;
 }
 
-.bookNowBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.ctaButton:hover {
+  background: rgba(253, 203, 226, 0.35);
+  transform: translateY(-1px);
 }
 
 /* Navigation Bar */
 .navBar {
-  background-color: rgba(248, 218, 218, 0.95);
-  /* #F8DADA with 95% opacity */
+  background-color: rgba(253, 203, 226, 0.95);
   height: 60px;
   transition: height var(--transition-default);
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* ... existing code ... */
@@ -187,7 +185,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #2C2C2C;
+  color: var(--color-text-primary);
   /* Charcoal */
   text-decoration: none;
   text-transform: uppercase;

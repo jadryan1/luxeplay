@@ -12,7 +12,7 @@ export default function FinalCTA() {
         </p>
         <div className={styles.cta}>
           <Button variant="primary" size="large" href="/contact">
-            Book Your Consultation
+            Start Planning
           </Button>
         </div>
         <p className={styles.responseTime}>

@@ -1,43 +1,64 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import Link from "next/link";
+import Image from "next/image";
 import styles from "@/styles/GalleryPage.module.css";
 
-const categories = [
-  "All",
-  "Birthdays",
-  "Baby Showers",
-  "Corporate Events",
-  "Holiday Parties",
-];
+export const metadata: Metadata = {
+  title:
+    "Event Theme Lookbook | Luxe Play NY – Luxury Children's Party Rentals NYC",
+  description:
+    "Browse Luxe Play NY's themed event lookbook. From Dino World to Royal Garden, every setup is custom-built for your child's celebration. Serving the tri-state area (NY, NJ, CT, PA).",
+};
 
-const galleryItems = [
-  { id: 1, category: "Birthdays", height: "400px" },
-  { id: 2, category: "Baby Showers", height: "300px" },
-  { id: 3, category: "Birthdays", height: "350px" },
-  { id: 4, category: "Corporate Events", height: "300px" },
-  { id: 5, category: "Holiday Parties", height: "350px" },
-  { id: 6, category: "Birthdays", height: "400px" },
-  { id: 7, category: "Baby Showers", height: "300px" },
-  { id: 8, category: "Birthdays", height: "350px" },
-  { id: 9, category: "Corporate Events", height: "400px" },
-  { id: 10, category: "Baby Showers", height: "300px" },
-  { id: 11, category: "Holiday Parties", height: "350px" },
-  { id: 12, category: "Birthdays", height: "300px" },
+const themes = [
+  {
+    name: "Dino World",
+    slug: "dino-world",
+    tagline: "A prehistoric adventure, refined.",
+    gender: "Boys" as const,
+    cover: "/assets/themes/Jurassic Theme/jurassic11.jpg",
+  },
+  {
+    name: "First Lap",
+    slug: "first-lap",
+    tagline: "Speed, style, and a celebration worth remembering.",
+    gender: "Boys" as const,
+    cover: "/assets/themes/Race Theme/race2.jpg",
+  },
+  {
+    name: "Rookie of the Year",
+    slug: "rookie-of-the-year",
+    tagline: "Big league energy for your littlest all-star.",
+    gender: "Boys" as const,
+    cover: "/assets/themes/Baseball Theme/baseball3.jpg",
+  },
+  {
+    name: "Enchanted Garden",
+    slug: "enchanted-garden",
+    tagline: "Butterflies, blooms, and the softest kind of magic.",
+    gender: "Girls" as const,
+    cover: "/assets/themes/Fairy Theme/fairy2.jpg",
+  },
+  {
+    name: "Riviera",
+    slug: "riviera",
+    tagline: "Effortlessly sun-kissed. Undeniably luxe.",
+    gender: "Girls" as const,
+    cover: "/assets/themes/BeachClub Theme/beach9.jpg",
+  },
+  {
+    name: "Royal Garden",
+    slug: "royal-garden",
+    tagline: "Every little queen deserves a kingdom.",
+    gender: "Girls" as const,
+    cover: "/assets/themes/Princess Castle Theme/princess6.jpg",
+  },
 ];
 
 export default function GalleryPage() {
-  const [activeFilter, setActiveFilter] = useState("All");
-
-  const filteredItems =
-    activeFilter === "All"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeFilter);
-
   return (
     <>
       <Header />
@@ -46,64 +67,63 @@ export default function GalleryPage() {
         <section className={styles.hero}>
           <div className={styles.container}>
             <Eyebrow>OUR WORK</Eyebrow>
-            <h1>Styled to Perfection</h1>
-            <p className={styles.heroSubtitle}>
-              See how we transform Manhattan&apos;s most exclusive venues into
-              magical play spaces
+            <h1>Event Theme Lookbook</h1>
+            <p className={styles.heroBody}>
+              Each event we create is built from scratch around your vision.
+              Scroll through our past setups to spark ideas, discover
+              what&apos;s possible, and picture it at your next celebration.
             </p>
           </div>
         </section>
 
-        {/* Filter */}
-        <section className={styles.filterSection}>
-          <div className={styles.container}>
-            <div className={styles.filters}>
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`${styles.filterButton} ${
-                    activeFilter === category ? styles.active : ""
-                  }`}
-                  onClick={() => setActiveFilter(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Grid */}
-        <section className={styles.gallery}>
+        {/* Theme Cards */}
+        <section className={styles.themesSection}>
           <div className={styles.container}>
             <div className={styles.grid}>
-              {filteredItems.map((item) => (
-                <div key={item.id} className={styles.gridItem}>
-                  <ImagePlaceholder
-                    width="100%"
-                    height={item.height}
-                    borderRadius="var(--border-radius)"
-                  />
-                  <div className={styles.overlay}>
-                    <span className={styles.category}>{item.category}</span>
+              {themes.map((theme) => (
+                <article key={theme.slug} className={styles.card}>
+                  <div className={styles.cardImage}>
+                    <Image
+                      src={theme.cover}
+                      alt={`${theme.name} luxury children's party setup by Luxe Play NY`}
+                      width={600}
+                      height={750}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                    <span
+                      className={`${styles.genderBadge} ${theme.gender === "Boys" ? styles.boys : styles.girls
+                        }`}
+                    >
+                      {theme.gender}
+                    </span>
                   </div>
-                </div>
+                  <div className={styles.cardContent}>
+                    <h2>{theme.name}</h2>
+                    <p className={styles.tagline}>{theme.tagline}</p>
+                    <Link
+                      href={`/gallery/${theme.slug}`}
+                      className={styles.cardCta}
+                    >
+                      Explore This Theme →
+                    </Link>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className={styles.cta}>
+        {/* Closing CTA */}
+        <section className={styles.closingCta}>
           <div className={styles.container}>
-            <h2>Want to See Your Event Here?</h2>
-            <p>
-              Book your consultation today and let&apos;s create something beautiful
-              together.
+            <h2>Have Something in Mind?</h2>
+            <p className={styles.closingCtaBody}>
+              We build every setup from scratch. Tell us your vision and
+              we&apos;ll handle everything else.
             </p>
-            <a href="/contact" className={styles.ctaButton}>
-              Book Your Event
-            </a>
+            <Link href="/contact" className={styles.ctaButton}>
+              Start Planning
+            </Link>
           </div>
         </section>
       </main>

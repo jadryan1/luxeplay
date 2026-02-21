@@ -1,9 +1,7 @@
 .process {
-  background: linear-gradient(
-    180deg,
-    var(--color-light-pink) 0%,
-    var(--color-accent-pink) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--color-light-pink) 0%,
+      var(--color-accent-pink) 100%);
   padding: var(--section-padding-y) 0;
 }
 
@@ -59,9 +57,9 @@
 }
 
 .stepTitle {
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-text-primary);
   margin-bottom: 8px;
 }

@@ -1,28 +1,24 @@
-import { Metadata } from "next";
-import Link from "next/link";
+"use client";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import Button from "@/components/ui/Button";
+import AddToEstimate from "@/components/ui/AddToEstimate";
+import { addOns } from "@/lib/products";
 import styles from "@/styles/CollectionsPage.module.css";
-
-export const metadata: Metadata = {
-  title: "Our Services | Luxe Play NY",
-  description:
-    "Explore our luxury soft play packages, ball pits, bounce houses, and elite packages. Find the perfect play experience for your Manhattan event.",
-};
+import Link from "next/link";
 
 const services = [
   {
     id: "soft-play",
     name: "Soft Play Packages",
     tagline: "THE COMPLETE EXPERIENCE",
-    price: "Starting at $1,450",
+    price: "Starting at $1,475",
     description:
-      "Our signature soft play packages include everything you need for an unforgettable event. Each package features a ball pit, tunnel with steps and slide, building blocks, hoppers, rocker, mats, and fencing.",
+      "A captivating, safe environment that invites endless imagination and joy. This comprehensive setup features a custom-colored ball pit, soft climbing structures, and aesthetic fencing. Perfectly scaled for energetic toddlers while seamlessly blending into design-conscious celebrations.",
     highlights: [
-      "4 package options from $1,450 - $1,900",
+      "4 package options from $1,475 – $1,950",
       "Areas ranging from 12x18 ft to 14x27 ft",
       "Multiple color palettes available",
       "All equipment included",
@@ -33,12 +29,12 @@ const services = [
     id: "ball-pits",
     name: "Ball Pits",
     tagline: "STANDALONE LUXURY",
-    price: "Starting at $950",
+    price: "Starting at $975",
     description:
-      "Perfect for smaller spaces or as the centerpiece of your event. Our ball pits come filled with white and clear balls, with custom color options available.",
+      "A striking, sculptural centerpiece that brings the magic of play to any room. Each pit is styled with your choice of premium ball colors, elegant fencing, and soft landing mats. Designed for stylish minimalists and children of all ages to dive into.",
     highlights: [
-      "4 sizes from 10x8 ft to 14 ft round",
-      "Prices from $950 - $1,400",
+      "4 sizes from 10x6 ft to 14 ft round",
+      "Prices from $975 – $1,450",
       "Multiple color options",
       "Custom ball colors available",
     ],
@@ -48,14 +44,14 @@ const services = [
     id: "bounce-house",
     name: "Bounce House",
     tagline: "ENDLESS FUN",
-    price: "Starting at $875",
+    price: "Starting at $1,000",
     description:
-      "Our premium bounce houses bring joy to children of all ages. Choose from classic bounce or upgrade to our bounce + slide combo for extra excitement.",
+      "An architectural showstopper that delivers high-energy thrills in a beautiful silhouette. Available in crisp white or pastel tones, featuring a spacious jumping area and optional slide attachment. Built for spirited children ready to soar and parents who appreciate clean, modern design.",
     highlights: [
-      "Luxe Bounce: $875 (13x13x9 ft)",
-      "Luxe Bounce + Slide: $1,000 (15x15x10 ft)",
+      "Luxe Bounce: $1,000 (13x13x9 ft)",
+      "Luxe Bounce + Slide: $1,250 (15x15x10 ft)",
       "Multiple color options",
-      "Combo with soft play available",
+      "Combo with soft play: add $650",
     ],
     href: "/collections/bounce-house",
   },
@@ -63,27 +59,17 @@ const services = [
     id: "elite",
     name: "Elite Packages",
     tagline: "THE ULTIMATE EXPERIENCE",
-    price: "Starting at $2,400",
+    price: "Starting at $2,450",
     description:
-      "Get the all-exclusive Luxe Play experience with our Elite packages. Combining soft play, ball pits, personalization, and toddler bounce—all at special bundled pricing.",
+      "The ultimate, all-encompassing world of play where every detail is flawlessly curated. This premium bundle unites a sweeping soft play landscape, a deluxe ball pit, and a matching boutique bounce house. Curated for the ultimate milestone celebration and the parent who wants an uncompromised, breathtaking impact.",
     highlights: [
-      "4 elite packages from $2,400 - $3,225",
-      "Save $100-$150 vs. à la carte",
+      "4 elite packages from $2,450 – $3,250",
+      "Save $100–$125 vs. à la carte",
       "Includes personalization",
       "Toddler bounce included",
     ],
     href: "/collections/elite",
   },
-];
-
-const addOns = [
-  { name: "Toddler Bounce House", price: "$700" },
-  { name: "Luxe Slide w/ Arc", price: "$250" },
-  { name: "Double Luxe Slide w/ Arc", price: "$425" },
-  { name: "Custom Vinyl Install", price: "Starting at $225" },
-  { name: "Custom Foam Arcs", price: "Starting at $275" },
-  { name: "Chaperone", price: "$150" },
-  { name: "Additional Hour", price: "$100/hr" },
 ];
 
 const bookingTerms = [
@@ -93,7 +79,7 @@ const bookingTerms = [
   "Additional hours must be agreed in advance",
 ];
 
-export default function CollectionsPage() {
+export default function PackagesPage() {
   return (
     <>
       <Header />
@@ -101,10 +87,10 @@ export default function CollectionsPage() {
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.container}>
-            <Eyebrow>OUR SERVICES</Eyebrow>
+            <Eyebrow>OUR PACKAGES</Eyebrow>
             <h1>Luxury Play Experiences</h1>
             <p className={styles.heroSubtitle}>
-              Four ways to bring magic to your next event—choose your perfect experience
+              Four ways to bring magic to your next event — choose your perfect experience
             </p>
           </div>
         </section>
@@ -116,9 +102,8 @@ export default function CollectionsPage() {
               <div
                 key={service.id}
                 id={service.id}
-                className={`${styles.collectionItem} ${
-                  index % 2 === 1 ? styles.reversed : ""
-                }`}
+                className={`${styles.collectionItem} ${index % 2 === 1 ? styles.reversed : ""
+                  }`}
               >
                 <Link href={service.href} className={styles.collectionImage}>
                   <ImagePlaceholder
@@ -137,9 +122,9 @@ export default function CollectionsPage() {
                       <li key={i}>{highlight}</li>
                     ))}
                   </ul>
-                  <Button variant="primary" href={service.href}>
-                    View Packages
-                  </Button>
+                  <a href={service.href} className={styles.viewLink}>
+                    View Packages →
+                  </a>
                 </div>
               </div>
             ))}
@@ -157,10 +142,21 @@ export default function CollectionsPage() {
               </p>
             </div>
             <div className={styles.addOnsGrid}>
-              {addOns.map((addOn, index) => (
-                <div key={index} className={styles.addOnCard}>
-                  <h3>{addOn.name}</h3>
-                  <p className={styles.addOnPrice}>{addOn.price}</p>
+              {addOns.map((addOn) => (
+                <div key={addOn.id} className={styles.addOnCard}>
+                  <div>
+                    <h3>{addOn.name}</h3>
+                    <p className={styles.addOnPrice}>{addOn.priceLabel}</p>
+                  </div>
+                  <AddToEstimate
+                    item={{
+                      id: addOn.id,
+                      name: addOn.name,
+                      category: addOn.category,
+                      price: addOn.price,
+                      priceLabel: addOn.priceLabel,
+                    }}
+                  />
                 </div>
               ))}
             </div>
@@ -178,9 +174,9 @@ export default function CollectionsPage() {
                   <li key={index}>{term}</li>
                 ))}
               </ul>
-              <Button variant="primary" href="/contact">
-                Book Your Event
-              </Button>
+              <a href="/contact" className={styles.viewLink} style={{ marginTop: "24px", display: "inline-block" }}>
+                Start Planning →
+              </a>
             </div>
           </div>
         </section>
@@ -193,9 +189,9 @@ export default function CollectionsPage() {
               We love creating bespoke experiences. Tell us your vision and
               we&apos;ll design a custom package just for you.
             </p>
-            <Button variant="primary" href="/contact">
-              Request Custom Quote
-            </Button>
+            <a href="/contact" className={styles.viewLink}>
+              Start Planning →
+            </a>
           </div>
         </section>
       </main>

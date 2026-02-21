@@ -1,0 +1,50 @@
+.selector {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-family: var(--font-raleway);
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+}
+
+.dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    background: none;
+}
+
+.dot:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.dot.selected {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+    transform: scale(1.1);
+}
+
+.colorName {
+    font-family: var(--font-raleway);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    font-style: italic;
+}

@@ -27,7 +27,7 @@
 }
 
 .heroPrice {
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-gold);
@@ -89,9 +89,9 @@
 }
 
 .packagePrice {
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-gold);
   margin-bottom: 20px;
 }
@@ -118,7 +118,7 @@
 
 .detailValue {
   color: var(--color-text-primary);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .colorOptions {
@@ -151,7 +151,7 @@
   margin-bottom: 24px;
 }
 
-.includedText > p {
+.includedText>p {
   margin-bottom: 32px;
 }
 
@@ -192,7 +192,7 @@
   margin-bottom: 20px;
 }
 
-.noteContent > p {
+.noteContent>p {
   margin-bottom: 32px;
 }
 
@@ -208,7 +208,7 @@
   margin-bottom: 16px;
 }
 
-.cta > .container > p {
+.cta>.container>p {
   color: rgba(255, 255, 255, 0.9);
   max-width: 500px;
   margin: 0 auto 32px;
@@ -232,7 +232,7 @@
   right: 16px;
   background-color: var(--color-gold);
   color: var(--color-white);
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -247,7 +247,7 @@
   display: inline-block;
   background-color: var(--color-accent-pink);
   color: var(--color-text-primary);
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 4px 10px;
@@ -283,6 +283,45 @@
 .comboPrice {
   color: var(--color-gold);
   font-weight: 600;
+}
+
+/* CTA Links */
+.ctaLink {
+  display: inline-block;
+  font-family: var(--font-raleway);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+  padding: 14px 32px;
+  transition: all 0.3s ease;
+}
+
+.ctaLink:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.ctaLinkSecondary {
+  display: inline-block;
+  font-family: var(--font-raleway);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  padding: 14px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ctaLinkSecondary:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 @media (max-width: 1199px) {

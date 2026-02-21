@@ -15,15 +15,15 @@
 }
 
 .sectionTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-raleway);
   font-size: 56px;
   margin-top: 16px;
   margin-bottom: 24px;
-  color: #2C2C2C;
+  color: var(--color-text-primary);
 }
 
 .subtext {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-raleway);
   font-size: 18px;
   color: #927474;
   max-width: 700px;

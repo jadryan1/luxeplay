@@ -28,7 +28,7 @@ export default function Introduction() {
             </p>
           </div>
           <Button variant="secondary" href="/collections">
-            View Our Collections
+            View Our Packages
           </Button>
         </div>
         <div className={styles.imageWrapper}>

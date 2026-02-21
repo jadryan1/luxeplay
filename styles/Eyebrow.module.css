@@ -1,15 +1,15 @@
 .eyebrow {
   display: block;
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 .gold {
-  color: var(--color-gold);
+  color: #C4909A;
 }
 
 .dark {

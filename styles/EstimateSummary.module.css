@@ -1,0 +1,146 @@
+.summary {
+    background-color: var(--color-light-pink);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: var(--font-raleway);
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-primary);
+}
+
+.clearBtn {
+    font-family: var(--font-raleway);
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.clearBtn:hover {
+    color: var(--color-gold);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.itemName {
+    font-family: var(--font-raleway);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+.itemColor {
+    font-family: var(--font-raleway);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+.itemRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.itemPrice {
+    font-family: var(--font-raleway);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-gold);
+}
+
+.removeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.removeBtn:hover {
+    color: var(--color-text-primary);
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-raleway);
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-primary);
+}
+
+.totalAmount {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color-gold);
+}
+
+.disclaimer {
+    margin-top: 12px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .summary {
+        padding: 24px;
+        margin-bottom: 32px;
+    }
+}

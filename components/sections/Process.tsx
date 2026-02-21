@@ -27,7 +27,7 @@ const steps = [
   {
     icon: <Sparkles />,
     title: "Prepare",
-    description: "We sanitize and style your collection",
+    description: "We sanitize and style your package",
   },
   {
     icon: <PartyPopper />,

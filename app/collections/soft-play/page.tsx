@@ -1,52 +1,15 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import Button from "@/components/ui/Button";
+import ColorSelector from "@/components/ui/ColorSelector";
+import AddToEstimate from "@/components/ui/AddToEstimate";
+import { softPlay } from "@/lib/products";
+import { colorMap } from "@/lib/colors";
 import styles from "@/styles/ServicePage.module.css";
-
-export const metadata: Metadata = {
-  title: "Soft Play Packages | Luxe Play NY",
-  description:
-    "Complete luxury soft play packages including ball pit, tunnel, slide, blocks, and more. Starting at $1,450. Perfect for Manhattan events.",
-};
-
-const packages = [
-  {
-    id: "grand-luxe",
-    name: "Grand Luxe",
-    price: "$1,450",
-    area: "12 ft x 18 ft",
-    ballPitSize: "10x6 rectangle",
-    colors: ["White", "Nude", "Blush", "Sky Blue", "Lavender"],
-  },
-  {
-    id: "the-celeb",
-    name: "The Celeb",
-    price: "$1,650",
-    area: "12 ft x 24 ft",
-    ballPitSize: "11x8 rectangle",
-    colors: ["Black", "Hot Pink", "Red"],
-    featured: true,
-  },
-  {
-    id: "the-royal",
-    name: "The Royal",
-    price: "$1,800",
-    area: "13 ft x 23 ft",
-    ballPitSize: "10x13 rectangle",
-    colors: ["White", "Forest Green", "Pink", "Cream", "Silver"],
-  },
-  {
-    id: "luxe-play",
-    name: "Luxe Play",
-    price: "$1,900",
-    area: "14 ft x 27 ft",
-    ballPitSize: "14 ft round",
-    colors: ["White", "Lavender"],
-  },
-];
 
 const included = [
   "Ball pit with white & clear balls",
@@ -59,36 +22,23 @@ const included = [
   "Fencing",
 ];
 
-const colorMap: Record<string, string> = {
-  White: "#FFFFFF",
-  Nude: "#E8D4C4",
-  Blush: "#FFB5D5",
-  "Sky Blue": "#87CEEB",
-  Lavender: "#E6E6FA",
-  Black: "#000000",
-  "Hot Pink": "#FF69B4",
-  Red: "#DC143C",
-  "Forest Green": "#228B22",
-  Pink: "#FFC0CB",
-  Cream: "#FFFDD0",
-  Silver: "#C0C0C0",
-};
-
 export default function SoftPlayPage() {
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
+
   return (
     <>
       <Header />
       <main className={styles.servicePage}>
         {/* Hero */}
-        <section className={styles.hero} style={{ backgroundColor: "var(--color-primary-bg)" }}>
+        <section className={styles.hero} style={{ backgroundColor: "#F5EDE8" }}>
           <div className={styles.container}>
             <Eyebrow>SOFT PLAY PACKAGES</Eyebrow>
             <h1>The Complete Play Experience</h1>
             <p className={styles.heroSubtitle}>
-              Everything you need for an unforgettable event—ball pit, tunnel, slide,
+              Everything you need for an unforgettable event — ball pit, tunnel, slide,
               blocks, and more. Four packages to fit your space and style.
             </p>
-            <p className={styles.heroPrice}>Starting at $1,450</p>
+            <p className={styles.heroPrice}>Starting at $1,475</p>
           </div>
         </section>
 
@@ -103,7 +53,7 @@ export default function SoftPlayPage() {
               </p>
             </div>
             <div className={styles.packagesGrid}>
-              {packages.map((pkg) => (
+              {softPlay.map((pkg) => (
                 <div
                   key={pkg.id}
                   className={`${styles.packageCard} ${pkg.featured ? styles.featured : ""}`}
@@ -111,16 +61,18 @@ export default function SoftPlayPage() {
                   {pkg.featured && (
                     <span className={styles.featuredBadge}>Most Popular</span>
                   )}
-                  <div className={styles.packageImage}>
-                    <ImagePlaceholder
-                      width="100%"
-                      height="100%"
-                      borderRadius="0"
-                    />
+                  <div
+                    className={styles.packageImage}
+                    style={{
+                      backgroundColor: selectedColors[pkg.id] ? colorMap[selectedColors[pkg.id]] : "#F5EDE8",
+                      transition: "background-color 0.3s ease"
+                    }}
+                  >
+                    <ImagePlaceholder width="100%" height="100%" borderRadius="0" />
                   </div>
                   <div className={styles.packageContent}>
                     <h3 className={styles.packageName}>{pkg.name}</h3>
-                    <p className={styles.packagePrice}>{pkg.price}</p>
+                    <p className={styles.packagePrice}>{pkg.priceLabel}</p>
                     <div className={styles.packageDetails}>
                       <div className={styles.detailRow}>
                         <span className={styles.detailLabel}>Area Required</span>
@@ -130,23 +82,32 @@ export default function SoftPlayPage() {
                         <span className={styles.detailLabel}>Ball Pit Size</span>
                         <span className={styles.detailValue}>{pkg.ballPitSize}</span>
                       </div>
-                      <div className={styles.detailRow}>
-                        <span className={styles.detailLabel}>Color Options</span>
-                        <div className={styles.colorOptions}>
-                          {pkg.colors.map((color) => (
-                            <span
-                              key={color}
-                              className={styles.colorDot}
-                              style={{ backgroundColor: colorMap[color] }}
-                              title={color}
-                            />
-                          ))}
-                        </div>
-                      </div>
                     </div>
-                    <Button variant="primary" href="/contact" fullWidth>
-                      Book {pkg.name}
-                    </Button>
+                    <div style={{ margin: "16px 0" }}>
+                      <ColorSelector
+                        colors={pkg.colors}
+                        selectedColor={selectedColors[pkg.id]}
+                        onSelect={(color) =>
+                          setSelectedColors((prev) => ({ ...prev, [pkg.id]: color }))
+                        }
+                      />
+                    </div>
+                    <AddToEstimate
+                      item={{
+                        id: pkg.id,
+                        name: pkg.name,
+                        category: pkg.category,
+                        price: pkg.price,
+                        priceLabel: pkg.priceLabel,
+                        selectedColor: selectedColors[pkg.id],
+                      }}
+                      requiresColor
+                    />
+                    <div style={{ marginTop: "16px", textAlign: "center" }}>
+                      <a href="/contact" className={styles.viewLink} style={{ fontSize: "0.8125rem", textTransform: "none", letterSpacing: "normal" }}>
+                        Not sure? Start Planning →
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -185,18 +146,18 @@ export default function SoftPlayPage() {
         {/* CTA */}
         <section className={styles.cta}>
           <div className={styles.container}>
-            <h2>Ready to Book?</h2>
+            <h2>Ready for the Luxe Experience?</h2>
             <p>
-              Contact us to check availability and secure your date.
+              Let&apos;s design the perfect play experience for your event.
               Most inquiries answered within 2 hours.
             </p>
             <div className={styles.ctaButtons}>
-              <Button variant="primary" href="/contact">
-                Book Your Event
-              </Button>
-              <Button variant="secondary" href="/collections">
-                View All Services
-              </Button>
+              <a href="/contact" className={styles.ctaLink}>
+                Get a Free Estimate
+              </a>
+              <a href="/collections" className={styles.ctaLinkSecondary}>
+                Start Planning
+              </a>
             </div>
           </div>
         </section>

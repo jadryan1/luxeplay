@@ -59,7 +59,7 @@ export default function Testimonials() {
       <div className={styles.container}>
         <div className={styles.header}>
           <Eyebrow>KIND WORDS</Eyebrow>
-          <h2>Trusted by Manhattan&apos;s Finest</h2>
+          <h2>Trusted by the Tri-State Area&apos;s Most Celebrated Families</h2>
         </div>
 
         <div className={styles.carousel}>
@@ -103,9 +103,8 @@ export default function Testimonials() {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              className={`${styles.dot} ${
-                index === currentIndex ? styles.activeDot : ""
-              }`}
+              className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ""
+                }`}
               onClick={() => setCurrentIndex(index)}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -114,7 +113,7 @@ export default function Testimonials() {
 
         <div className={styles.clients}>
           <p className={styles.clientsText}>
-            Trusted by Manhattan&apos;s top event planners and venues
+            Trusted by top event planners and venues across the tri-state area
           </p>
           <div className={styles.clientLogos}>
             {clientLogos.map((_, index) => (

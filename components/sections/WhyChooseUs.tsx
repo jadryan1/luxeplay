@@ -6,27 +6,27 @@ import styles from "@/styles/WhyChooseUs.module.css";
 const features = [
   {
     icon: <Sparkles />,
-    title: "Museum-Quality Cleanliness",
+    title: "Impeccably Curated",
     description:
-      "Our professional-grade sanitization process includes hospital-grade disinfection and individual ball washing. Because luxury demands perfection.",
+      "An environment that feels as beautiful as it looks. We meticulously prepare every piece so your event space remains pristine. Enjoy peace of mind while they play in luxury.",
   },
   {
     icon: <Palette />,
-    title: "Aesthetic Integration",
+    title: "Seamless Aesthetics",
     description:
-      "Neutral palettes and modern designs that complement your event decor—never clash with it. From minimalist whites to soft pastels.",
+      "Play spaces designed to elevate, never compromise. Our neutral palettes and modern silhouettes blend flawlessly with your carefully chosen decor. A stunning backdrop for every memory.",
   },
   {
     icon: <Shield />,
-    title: "Premium Quality Materials",
+    title: "Thoughtful Details",
     description:
-      "High-density foam, non-toxic materials, and equipment that meets the highest safety standards. Fully insured and licensed in NYC.",
+      "Every element is chosen with intention. From high-density foam to buttery soft finishes, we bring the boutique experience directly to you. An elevated standard of play.",
   },
   {
     icon: <HandMetal />,
-    title: "Full-Service Excellence",
+    title: "Effortless Hosting",
     description:
-      "Delivery, professional styling, setup, and breakdown included. You focus on hosting; we handle everything else.",
+      "The ultimate luxury is your time. Our team handles every detail from white-glove delivery to meticulous styling and breakdown. You simply arrive and celebrate.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
       <div className={styles.container}>
         <div className={styles.header}>
           <Eyebrow>THE LUXE DIFFERENCE</Eyebrow>
-          <h2>Why Manhattan&apos;s Elite Choose Us</h2>
+          <h2>Why the Tri-State Area&apos;s Most Celebrated Families Choose Us</h2>
         </div>
         <div className={styles.grid}>
           {features.map((feature, index) => (

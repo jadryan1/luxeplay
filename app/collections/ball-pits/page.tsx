@@ -1,78 +1,33 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
-import Button from "@/components/ui/Button";
+import ColorSelector from "@/components/ui/ColorSelector";
+import AddToEstimate from "@/components/ui/AddToEstimate";
+import { ballPits } from "@/lib/products";
+import { colorMap } from "@/lib/colors";
 import styles from "@/styles/ServicePage.module.css";
 
-export const metadata: Metadata = {
-  title: "Ball Pits | Luxe Play NY",
-  description:
-    "Luxury standalone ball pits in various sizes and colors. Starting at $950. Perfect for smaller spaces or as the centerpiece of your Manhattan event.",
-};
-
-const packages = [
-  {
-    id: "deluxe-play",
-    name: "Deluxe Play",
-    price: "$950",
-    size: "10 ft x 8 ft",
-    colors: ["White", "Blush", "Nude", "Sky Blue", "Lavender"],
-  },
-  {
-    id: "supreme-play",
-    name: "Supreme Play",
-    price: "$1,100",
-    size: "11 ft x 8 ft",
-    colors: ["Black", "Hot Pink", "Red"],
-  },
-  {
-    id: "plush-play",
-    name: "Plush Play",
-    price: "$1,300",
-    size: "10 ft x 13 ft",
-    colors: ["Pink", "Forest Green", "Cream", "White"],
-    featured: true,
-  },
-  {
-    id: "grand-play",
-    name: "Grand Play",
-    price: "$1,400",
-    size: "14 ft round",
-    colors: ["White", "Lavender"],
-  },
-];
-
-const colorMap: Record<string, string> = {
-  White: "#FFFFFF",
-  Nude: "#E8D4C4",
-  Blush: "#FFB5D5",
-  "Sky Blue": "#87CEEB",
-  Lavender: "#E6E6FA",
-  Black: "#000000",
-  "Hot Pink": "#FF69B4",
-  Red: "#DC143C",
-  "Forest Green": "#228B22",
-  Pink: "#FFC0CB",
-  Cream: "#FFFDD0",
-};
-
 export default function BallPitsPage() {
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({});
+
   return (
     <>
       <Header />
       <main className={styles.servicePage}>
         {/* Hero */}
-        <section className={styles.hero} style={{ backgroundColor: "#FFECD2" }}>
+        <section className={styles.hero} style={{ backgroundColor: "#F5EDE8" }}>
           <div className={styles.container}>
             <Eyebrow>BALL PITS</Eyebrow>
             <h1>Standalone Luxury Ball Pits</h1>
             <p className={styles.heroSubtitle}>
               Perfect for smaller spaces or as the stunning centerpiece of your event.
-              All ball pits filled with white & clear balls.
+              All ball pits filled with white &amp; clear balls.
             </p>
-            <p className={styles.heroPrice}>Starting at $950</p>
+            <p className={styles.heroPrice}>Starting at $975</p>
           </div>
         </section>
 
@@ -83,11 +38,11 @@ export default function BallPitsPage() {
               <Eyebrow>CHOOSE YOUR SIZE</Eyebrow>
               <h2>Ball Pit Options</h2>
               <p className={styles.packagesSubtext}>
-                Four sizes to fit any space—from intimate gatherings to grand celebrations
+                Four sizes to fit any space — from intimate gatherings to grand celebrations
               </p>
             </div>
             <div className={styles.packagesGrid}>
-              {packages.map((pkg) => (
+              {ballPits.map((pkg) => (
                 <div
                   key={pkg.id}
                   className={`${styles.packageCard} ${pkg.featured ? styles.featured : ""}`}
@@ -95,38 +50,49 @@ export default function BallPitsPage() {
                   {pkg.featured && (
                     <span className={styles.featuredBadge}>Best Value</span>
                   )}
-                  <div className={styles.packageImage}>
-                    <ImagePlaceholder
-                      width="100%"
-                      height="100%"
-                      borderRadius="0"
-                    />
+                  <div
+                    className={styles.packageImage}
+                    style={{
+                      backgroundColor: selectedColors[pkg.id] ? colorMap[selectedColors[pkg.id]] : "#F5EDE8",
+                      transition: "background-color 0.3s ease"
+                    }}
+                  >
+                    <ImagePlaceholder width="100%" height="100%" borderRadius="0" />
                   </div>
                   <div className={styles.packageContent}>
                     <h3 className={styles.packageName}>{pkg.name}</h3>
-                    <p className={styles.packagePrice}>{pkg.price}</p>
+                    <p className={styles.packagePrice}>{pkg.priceLabel}</p>
                     <div className={styles.packageDetails}>
                       <div className={styles.detailRow}>
                         <span className={styles.detailLabel}>Size</span>
-                        <span className={styles.detailValue}>{pkg.size}</span>
-                      </div>
-                      <div className={styles.detailRow}>
-                        <span className={styles.detailLabel}>Color Options</span>
-                        <div className={styles.colorOptions}>
-                          {pkg.colors.map((color) => (
-                            <span
-                              key={color}
-                              className={styles.colorDot}
-                              style={{ backgroundColor: colorMap[color] }}
-                              title={color}
-                            />
-                          ))}
-                        </div>
+                        <span className={styles.detailValue}>{pkg.dimensions}</span>
                       </div>
                     </div>
-                    <Button variant="primary" href="/contact" fullWidth>
-                      Book {pkg.name}
-                    </Button>
+                    <div style={{ margin: "16px 0" }}>
+                      <ColorSelector
+                        colors={pkg.colors}
+                        selectedColor={selectedColors[pkg.id]}
+                        onSelect={(color) =>
+                          setSelectedColors((prev) => ({ ...prev, [pkg.id]: color }))
+                        }
+                      />
+                    </div>
+                    <AddToEstimate
+                      item={{
+                        id: pkg.id,
+                        name: pkg.name,
+                        category: pkg.category,
+                        price: pkg.price,
+                        priceLabel: pkg.priceLabel,
+                        selectedColor: selectedColors[pkg.id],
+                      }}
+                      requiresColor
+                    />
+                    <div style={{ marginTop: "16px", textAlign: "center" }}>
+                      <a href="/contact" className={styles.viewLink} style={{ fontSize: "0.8125rem", textTransform: "none", letterSpacing: "normal" }}>
+                        Not sure? Start Planning →
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -134,7 +100,7 @@ export default function BallPitsPage() {
           </div>
         </section>
 
-        {/* Note about custom colors */}
+        {/* Custom Colors Note */}
         <section className={styles.note}>
           <div className={styles.container}>
             <div className={styles.noteContent}>
@@ -145,9 +111,9 @@ export default function BallPitsPage() {
                 Want to match your event theme? Ask about our color chart for additional
                 ball color options to create your perfect aesthetic.
               </p>
-              <Button variant="secondary" href="/contact">
+              <a href="/contact" className={styles.ctaLinkSecondary} style={{ marginTop: "24px", display: "inline-block" }}>
                 Inquire About Custom Colors
-              </Button>
+              </a>
             </div>
           </div>
         </section>
@@ -155,18 +121,18 @@ export default function BallPitsPage() {
         {/* CTA */}
         <section className={styles.cta}>
           <div className={styles.container}>
-            <h2>Ready to Book?</h2>
+            <h2>Ready for the Luxe Experience?</h2>
             <p>
-              Contact us to check availability and secure your date.
+              Let&apos;s design the perfect play experience for your event.
               Most inquiries answered within 2 hours.
             </p>
             <div className={styles.ctaButtons}>
-              <Button variant="primary" href="/contact">
-                Book Your Event
-              </Button>
-              <Button variant="secondary" href="/collections">
-                View All Services
-              </Button>
+              <a href="/contact" className={styles.ctaLink}>
+                Get a Free Estimate
+              </a>
+              <a href="/collections" className={styles.ctaLinkSecondary}>
+                Start Planning
+              </a>
             </div>
           </div>
         </section>

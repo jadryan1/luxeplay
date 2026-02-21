@@ -31,16 +31,16 @@
 }
 
 .logoText {
-  font-family: var(--font-heading);
+  font-family: var(--font-raleway);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-white);
 }
 
 .logoAccent {
-  font-family: var(--font-heading);
+  font-family: var(--font-raleway);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-gold);
 }
 
@@ -50,9 +50,9 @@
 }
 
 .columnTitle {
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.1em;

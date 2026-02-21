@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -42,14 +42,26 @@ const collectionsSubmenu = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [collectionsOpen, setCollectionsOpen] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentY = window.scrollY;
+      setIsScrolled(currentY > 20);
+
+      // Directional hide/show
+      if (currentY > lastScrollY.current && currentY > 100) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      lastScrollY.current = currentY;
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -60,7 +72,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isHidden ? styles.hidden : ""}`}>
       {/* Top Bar */}
       <div className={styles.topBar}>
         <div className={styles.topBarContainer}>
@@ -106,10 +118,10 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Book Now Button & Mobile Toggle - Right */}
+          {/* Get a Free Estimate Button & Mobile Toggle - Right */}
           <div className={styles.headerCta}>
-            <Link href="/contact" className={styles.bookNowBtn}>
-              BOOK NOW
+            <Link href="/contact" className={styles.ctaButton}>
+              START PLANNING
             </Link>
           </div>
 
@@ -157,7 +169,7 @@ export default function Header() {
               onMouseLeave={() => setCollectionsOpen(false)}
             >
               <span className={styles.navLink}>
-                COLLECTIONS <ChevronDown size={14} />
+                PACKAGES <ChevronDown size={14} />
               </span>
               <ul className={`${styles.dropdown} ${collectionsOpen ? styles.dropdownOpen : ""}`}>
                 {collectionsSubmenu.map((item) => (
@@ -277,14 +289,14 @@ export default function Header() {
               </li>
             </ul>
 
-            {/* Main Book Now Button is in Header, but we also kept one here just in case?
-                The design says "Keep Book Now button (right side, smaller)" so it's in the top bar.
+            {/* Main Get a Free Estimate Button is in Header, but we also kept one here just in case?
+                The design says "Keep Get a Free Estimate button (right side, smaller)" so it's in the top bar.
                 Should I remove it from here to avoid duplication?
                 "Mobile menu: ... Include social icons at top ... All menu items stacked"
-                It doesn't explicitly ask for Book Now inside the menu, but it's common.
+                It doesn't explicitly ask for Get a Free Estimate inside the menu, but it's common.
                 However, since it's on the fixed header, it might be redundant or crowded.
                 The previous code had it. I'll keep it as an extra CTA, or remove if it feels too much.
-                I'll leave it since the user didn't explicitly say "Remove Book Now from mobile menu".
+                I'll leave it since the user didn't explicitly say "Remove Get a Free Estimate from mobile menu".
              */}
           </div>
         </div>

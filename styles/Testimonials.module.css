@@ -49,9 +49,7 @@
 .testimonialCard {
   max-width: 700px;
   text-align: center;
-  padding: 40px;
-  background-color: var(--color-light-pink);
-  border-radius: var(--border-radius);
+  background-color: rgba(253, 203, 226, 0.35);
 }
 
 .stars {
@@ -63,7 +61,7 @@
 }
 
 .quote {
-  font-family: var(--font-heading);
+  font-family: var(--font-raleway);
   font-size: 1.5rem;
   font-weight: 400;
   font-style: italic;
@@ -79,9 +77,9 @@
 }
 
 .authorName {
-  font-family: var(--font-subheading);
+  font-family: var(--font-raleway);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-text-primary);
 }
 
@@ -163,7 +161,7 @@
     margin-bottom: 40px;
   }
 
-  .clientLogos > div {
+  .clientLogos>div {
     width: 80px !important;
     height: 80px !important;
   }

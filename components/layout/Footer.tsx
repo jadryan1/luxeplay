@@ -13,7 +13,7 @@ export default function Footer() {
               <span className={styles.logoText}>Luxe Play</span>
               <span className={styles.logoAccent}>NY</span>
             </Link>
-            <p className={styles.tagline}>Manhattan&apos;s Luxury Play Experience</p>
+            <p className={styles.tagline}>The Tri-State Area&apos;s Luxury Play Experience</p>
           </div>
 
           {/* Column 2: Quick Links */}
@@ -24,7 +24,7 @@ export default function Footer() {
                 <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/collections">Collections</Link>
+                <Link href="/collections">Packages</Link>
               </li>
               <li>
                 <Link href="/gallery">Gallery</Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
             </ul>
             <p className={styles.serviceArea}>
-              Service Area: Manhattan & Boroughs
+              Service Area: NYC · NY State · NJ · PA
             </p>
           </div>
         </div>

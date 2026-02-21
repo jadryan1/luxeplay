@@ -1,36 +1,26 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat, Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
+import { CartProvider } from "@/lib/CartContext";
 import "./globals.css";
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-heading",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-subheading",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-body",
-  subsets: ["latin"],
+  weight: ["200", "400", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Luxe Play NY | Luxury Soft Play & Party Rentals in Manhattan",
+  title: "Luxe Play NY | Luxury Soft Play & Party Rentals in the Tri-State Area",
   description:
-    "Manhattan's premier luxury soft play rental company. Instagram-worthy play experiences for high-end events, birthdays, and celebrations. Serving Manhattan and surrounding boroughs.",
+    "Premier luxury soft play rental company serving New York City, New York State, New Jersey, and Pennsylvania. Instagram-worthy play experiences for high-end events, birthdays, and celebrations.",
   keywords: [
     "luxury soft play rentals",
-    "Manhattan party rentals",
+    "tri-state party rentals",
     "NYC birthday party",
     "soft play rental NYC",
     "luxury event rentals",
-    "ball pit rental Manhattan",
+    "ball pit rental tri-state area",
   ],
 };
 
@@ -41,10 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${playfairDisplay.variable} ${montserrat.variable} ${inter.variable}`}
-      >
-        {children}
+      <body className={raleway.variable}>
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

@@ -31,12 +31,13 @@ export default function Accordion({ items }: AccordionProps) {
             className={styles.trigger}
             onClick={() => toggleItem(index)}
             aria-expanded={openIndex === index}
+            style={{ paddingLeft: "16px", paddingRight: "16px" }}
           >
             <span className={styles.question}>{item.question}</span>
             <ChevronDown className={styles.icon} />
           </button>
           <div className={styles.content}>
-            <p className={styles.answer}>{item.answer}</p>
+            <p className={styles.answer} style={{ paddingLeft: "16px", paddingRight: "16px" }}>{item.answer}</p>
           </div>
         </div>
       ))}

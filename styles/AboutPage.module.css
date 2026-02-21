@@ -1,5 +1,5 @@
 .aboutPage {
-  padding-top: 80px;
+  padding-top: 160px;
 }
 
 .container {
@@ -10,7 +10,7 @@
 
 /* Hero */
 .hero {
-  background-color: var(--color-primary-bg);
+  background-color: var(--color-section-break);
   padding: 80px 0;
   text-align: center;
 }
@@ -171,7 +171,7 @@
     gap: 24px;
   }
 
-  .pressLogos > div {
+  .pressLogos>div {
     width: 120px !important;
     height: 48px !important;
   }
