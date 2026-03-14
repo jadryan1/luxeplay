@@ -4,12 +4,12 @@ import Button from "@/components/ui/Button";
 import styles from "@/styles/Gallery.module.css";
 
 const galleryImages = [
-  { src: "/assets/themes/Fairy Theme/fairy2.jpg", alt: "Fairy themed celebration" },
-  { src: "/assets/themes/Baseball Theme/baseball3.jpg", alt: "Baseball themed party setup" },
-  { src: "/assets/themes/BeachClub Theme/beach9.jpg", alt: "Beach club themed event" },
-  { src: "/assets/themes/Jurassic Theme/jurassic11.jpg", alt: "Jurassic themed play experience" },
-  { src: "/assets/themes/Princess Castle Theme/princess6.jpg", alt: "Princess castle celebration" },
-  { src: "/assets/themes/Race Theme/race2.jpg", alt: "Race themed party setup" },
+  { src: "/assets/Themes/Fairy Theme/fairy2.jpg", alt: "Fairy themed celebration" },
+  { src: "/assets/Themes/Baseball Theme/baseball3.jpg", alt: "Baseball themed party setup" },
+  { src: "/assets/Themes/BeachClub Theme/beach9.jpg", alt: "Beach club themed event" },
+  { src: "/assets/Themes/Jurassic Theme/jurassic11.jpg", alt: "Jurassic themed play experience" },
+  { src: "/assets/Themes/Princess Castle Theme/princess6.jpg", alt: "Princess castle celebration" },
+  { src: "/assets/Themes/Race Theme/race2.jpg", alt: "Race themed party setup" },
 ];
 
 export default function Gallery() {
