@@ -19,9 +19,9 @@ export default function FinalCTA() {
           Most inquiries answered within 2 hours
         </p>
         <div className={styles.contactInfo}>
-          <a href="mailto:hello@luxeplayny.com" className={styles.contactLink}>
+          <a href="mailto:info@luxeplayny.com" className={styles.contactLink}>
             <Mail size={18} />
-            <span>hello@luxeplayny.com</span>
+            <span>info@luxeplayny.com</span>
           </a>
           <a href="tel:+12125551234" className={styles.contactLink}>
             <Phone size={18} />

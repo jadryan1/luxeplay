@@ -30,13 +30,15 @@ export default function AddToEstimate({ item, requiresColor = false }: AddToEsti
     const disabled = requiresColor && !item.selectedColor && !inCart;
 
     return (
-        <button
-            className={`${styles.button} ${inCart ? styles.inCart : ""} ${justAdded ? styles.added : ""}`}
-            onClick={handleClick}
-            disabled={disabled}
-            type="button"
-        >
-            {inCart ? "Added ✓" : justAdded ? "Added ✓" : "Add to Estimate"}
-        </button>
+        <div style={{ textAlign: "center" }}>
+            <button
+                className={`${styles.button} ${inCart ? styles.inCart : ""} ${justAdded ? styles.added : ""}`}
+                onClick={handleClick}
+                disabled={disabled}
+                type="button"
+            >
+                {inCart ? "Added ✓" : justAdded ? "Added ✓" : "Add to Estimate"}
+            </button>
+        </div>
     );
 }

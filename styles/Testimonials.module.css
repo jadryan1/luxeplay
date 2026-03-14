@@ -49,6 +49,8 @@
 .testimonialCard {
   max-width: 700px;
   text-align: center;
+  border-radius: 16px;
+  padding: 48px 40px;
   background-color: rgba(253, 203, 226, 0.35);
 }
 
@@ -61,12 +63,12 @@
 }
 
 .quote {
+  font-size: 14px;
   font-family: var(--font-raleway);
-  font-size: 1.5rem;
-  font-weight: 400;
   font-style: italic;
-  line-height: 1.6;
-  color: var(--color-text-primary);
+  font-weight: 300;
+  line-height: 1.8;
+  color: #3D2E2E;
   margin-bottom: 24px;
 }
 

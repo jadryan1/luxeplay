@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import styles from "@/styles/FounderStory.module.css";
 
 export default function FounderStory() {
@@ -7,39 +7,39 @@ export default function FounderStory() {
     <section className={styles.founderStory}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <ImagePlaceholder
-            width="100%"
-            aspectRatio="4/5"
-            borderRadius="50% 50% var(--border-radius) var(--border-radius)"
+          <Image
+            src="/assets/images/founders/founders_in_pit.jpeg"
+            alt="Gabriela and Anny, founders of LuxePlay NY"
+            width={800}
+            height={1000}
+            className={styles.founderImage}
+            sizes="(max-width: 767px) 100vw, 400px"
           />
         </div>
         <div className={styles.content}>
-          <Eyebrow>MEET THE FOUNDER</Eyebrow>
+          <Eyebrow>MEET THE FOUNDERS</Eyebrow>
           <h2 className={styles.title}>
-            From Tri-State Area Mom to Luxury Play Curator
+            Two Sisters. Four Kids. One Vision.
           </h2>
           <div className={styles.body}>
             <p>
-              Hi! I&apos;m [Founder Name], and I started Luxe Play NY because I
-              couldn&apos;t find party rentals that matched the aesthetic of my
-              tri-state area home and lifestyle. As a mother hosting events in our
-              [neighborhood] apartment, I knew there had to be a better
-              way—beautiful equipment that&apos;s safe, clean, and sophisticated.
+              Gabriela and Anny didn&apos;t set out to build a business — they set out to
+              build the kind of celebrations their own children deserved. The kind
+              where every detail is intentional, every corner is beautiful, and every
+              child feels like the star of the show.
             </p>
             <p>
-              What began as a personal frustration became a mission: to provide
-              tri-state area families with party rentals worthy of their
-              celebrations. Today, we&apos;re proud to serve the city&apos;s most
-              discerning hosts, from celebrity events to intimate family
-              gatherings.
+              As mothers, they know what it means to want perfect for your child. As
+              creatives, they know how to deliver it. Every setup is held to one
+              standard: would this be good enough for our kids? If the answer isn&apos;t
+              an immediate yes, it gets elevated until it is.
             </p>
             <p>
-              Every setup is treated like it&apos;s for my own child, because I
-              understand what matters most: creating magical moments in spaces
-              you&apos;re proud of.
+              LuxePlay NY was born from that obsession — and it shows in every
+              celebration they touch.
             </p>
           </div>
-          <p className={styles.signature}>— [Founder Name]</p>
+          <p className={styles.signature}>— Gabriela &amp; Anny</p>
         </div>
       </div>
     </section>

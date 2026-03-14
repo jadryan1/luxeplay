@@ -102,7 +102,7 @@ export default function Header() {
             >
               <TikTokIcon />
             </a>
-            <a href="mailto:hello@luxeplayny.com" aria-label="Email">
+            <a href="mailto:info@luxeplayny.com" aria-label="Email">
               <Mail />
             </a>
             <a href="tel:+12125551234" aria-label="Phone">
@@ -113,8 +113,14 @@ export default function Header() {
           {/* Logo - Center */}
           <Link href="/" className={styles.logo}>
             <div className={styles.logoContainer}>
-              <span className={styles.logoLuxe}>LUXE</span>
-              <span className={styles.logoPlay}>PLAY</span>
+              <Image
+                src="/assets/logos/Primary-LOGO.svg"
+                alt="LuxePlay Logo"
+                width={200}
+                height={68}
+                className={styles.logoImage}
+                priority
+              />
             </div>
           </Link>
 
@@ -187,7 +193,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/#faq" className={styles.navLink}>
+              <Link href="/faqs" className={styles.navLink}>
                 FAQS
               </Link>
             </li>
@@ -219,7 +225,7 @@ export default function Header() {
               <a href="https://tiktok.com/@luxeplayny" target="_blank" rel="noopener noreferrer">
                 <TikTokIcon />
               </a>
-              <a href="mailto:hello@luxeplayny.com">
+              <a href="mailto:info@luxeplayny.com">
                 <Mail size={24} />
               </a>
               <a href="tel:+12125551234">
@@ -258,7 +264,7 @@ export default function Header() {
                   className={styles.mobileNavLink}
                   onClick={() => setCollectionsOpen(!collectionsOpen)}
                 >
-                  COLLECTIONS <ChevronDown size={16} className={collectionsOpen ? styles.rotated : ""} />
+                  PACKAGES <ChevronDown size={16} className={collectionsOpen ? styles.rotated : ""} />
                 </button>
                 {collectionsOpen && (
                   <ul className={styles.mobileSubmenu}>
@@ -278,7 +284,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" className={styles.mobileNavLink} onClick={closeMenu}>
+                <Link href="/faqs" className={styles.mobileNavLink} onClick={closeMenu}>
                   FAQS
                 </Link>
               </li>

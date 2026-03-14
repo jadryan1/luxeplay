@@ -58,8 +58,8 @@ export default function Testimonials() {
     <section className={styles.testimonials}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Eyebrow>KIND WORDS</Eyebrow>
-          <h2>Trusted by the Tri-State Area&apos;s Most Celebrated Families</h2>
+          <Eyebrow>CLIENT LOVE</Eyebrow>
+          <h2>Trusted by the Tri-State Area&apos;s Coolest  Families</h2>
         </div>
 
         <div className={styles.carousel}>

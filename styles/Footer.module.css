@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--color-charcoal);
-  padding: 80px 0 40px;
+  padding: 40px 0 24px;
 }
 
 .container {
@@ -9,39 +9,40 @@
   padding: 0 var(--section-padding-x);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  gap: 48px;
-  padding-bottom: 48px;
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogo {
+  width: 140px;
+  height: auto;
+  transition: transform var(--transition-medium);
+}
+
+.footerLogo:hover {
+  transform: scale(1.05);
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contentGroup {
+  display: flex;
+  gap: 40px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-}
-
-.logo {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  text-decoration: none;
-  margin-bottom: 12px;
-}
-
-.logoText {
-  font-family: var(--font-raleway);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-white);
-}
-
-.logoAccent {
-  font-family: var(--font-raleway);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-gold);
+  max-width: 250px;
 }
 
 .tagline {
@@ -145,30 +146,49 @@
   color: var(--color-gold) !important;
 }
 
-@media (max-width: 1199px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 991px) {
+  .logoWrapper {
+    order: -1;
+    margin-bottom: 24px;
+  }
+
+  .mainContent {
+    flex-direction: column;
     gap: 40px;
+  }
+
+  .contentGroup {
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .column {
+    max-width: none;
   }
 }
 
 @media (max-width: 767px) {
   .footer {
-    padding: 60px 0 32px;
+    padding: 40px 0 24px;
   }
 
   .container {
     padding: 0 var(--section-padding-x-mobile);
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .contentGroup {
+    flex-direction: column;
+    gap: 40px;
   }
 
   .bottomBar {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .logoWrapper {
+    margin-bottom: 24px;
   }
 }

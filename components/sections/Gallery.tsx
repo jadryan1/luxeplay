@@ -1,17 +1,15 @@
+import Image from "next/image";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Button from "@/components/ui/Button";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import styles from "@/styles/Gallery.module.css";
 
-const galleryItems = [
-  { height: "400px" },
-  { height: "300px" },
-  { height: "350px" },
-  { height: "300px" },
-  { height: "350px" },
-  { height: "400px" },
-  { height: "300px" },
-  { height: "350px" },
+const galleryImages = [
+  { src: "/assets/themes/Fairy Theme/fairy2.jpg", alt: "Fairy themed celebration" },
+  { src: "/assets/themes/Baseball Theme/baseball3.jpg", alt: "Baseball themed party setup" },
+  { src: "/assets/themes/BeachClub Theme/beach9.jpg", alt: "Beach club themed event" },
+  { src: "/assets/themes/Jurassic Theme/jurassic11.jpg", alt: "Jurassic themed play experience" },
+  { src: "/assets/themes/Princess Castle Theme/princess6.jpg", alt: "Princess castle celebration" },
+  { src: "/assets/themes/Race Theme/race2.jpg", alt: "Race themed party setup" },
 ];
 
 export default function Gallery() {
@@ -26,12 +24,15 @@ export default function Gallery() {
           </p>
         </div>
         <div className={styles.grid}>
-          {galleryItems.map((item, index) => (
+          {galleryImages.map((img, index) => (
             <div key={index} className={styles.gridItem}>
-              <ImagePlaceholder
-                width="100%"
-                height={item.height}
-                borderRadius="var(--border-radius)"
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={700}
+                height={500}
+                sizes="(max-width: 767px) 50vw, 33vw"
+                className={styles.gridImage}
               />
             </div>
           ))}

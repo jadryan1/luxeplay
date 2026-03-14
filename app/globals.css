@@ -47,6 +47,10 @@
   --border-radius: 16px;
   --border-radius-small: 8px;
 
+  /* Header Layout */
+  --header-height: 160px;
+  --header-height-mobile: 80px;
+
   /* Transitions */
   --transition-default: 0.3s ease;
   --transition-fast: 0.15s ease;
@@ -206,5 +210,28 @@ button {
 
   .container {
     padding: 0 var(--section-padding-x-mobile);
+  }
+}
+
+/* Global Layout Header Padding Fixes */
+main {
+  padding-top: var(--header-height);
+}
+
+#faq,
+#process,
+#team {
+  scroll-margin-top: 180px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: var(--header-height-mobile);
+  }
+
+  #faq,
+  #process,
+  #team {
+    scroll-margin-top: 100px;
   }
 }

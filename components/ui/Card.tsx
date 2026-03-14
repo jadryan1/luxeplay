@@ -1,6 +1,5 @@
 import styles from "@/styles/Card.module.css";
 import ImagePlaceholder from "./ImagePlaceholder";
-import Button from "./Button";
 import Image from "next/image";
 
 interface FeatureCardProps {
@@ -35,29 +34,32 @@ export default function Card(props: CardProps) {
 
   return (
     <div className={styles.collectionCard}>
-      {props.imageSrc ? (
-        <div style={{ position: "relative", width: "100%", height: props.imageHeight || "400px" }}>
-          <Image
-            src={props.imageSrc}
-            alt={props.title}
-            fill
-            style={{ objectFit: "cover", borderRadius: "var(--border-radius) var(--border-radius) 0 0" }}
+      <div className={styles.collectionImageWrap}>
+        {props.imageSrc ? (
+          <div style={{ position: "relative", width: "100%", height: props.imageHeight || "400px" }}>
+            <Image
+              src={props.imageSrc}
+              alt={props.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        ) : (
+          <ImagePlaceholder
+            width="100%"
+            height={props.imageHeight || "400px"}
+            borderRadius="0"
           />
-        </div>
-      ) : (
-        <ImagePlaceholder
-          width="100%"
-          height={props.imageHeight || "400px"}
-          borderRadius="var(--border-radius) var(--border-radius) 0 0"
-        />
-      )}
+        )}
+      </div>
       <div className={styles.collectionContent}>
         <h3 className={styles.collectionTitle}>{props.title}</h3>
         <p className={styles.collectionPrice}>{props.price}</p>
         <p className={styles.collectionFeatures}>{props.features}</p>
-        <Button variant="secondary" size="small" href={props.href || "#"}>
-          View Details
-        </Button>
+        <a href={props.href || "#"} className={styles.viewLink}>
+          View Details →
+        </a>
       </div>
     </div>
   );

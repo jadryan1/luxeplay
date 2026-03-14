@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import ColorSelector from "@/components/ui/ColorSelector";
 import AddToEstimate from "@/components/ui/AddToEstimate";
-import { ballPits } from "@/lib/products";
-import { colorMap } from "@/lib/colors";
+import { ballPits, ballPitImages } from "@/lib/products";
 import styles from "@/styles/ServicePage.module.css";
 
 export default function BallPitsPage() {
@@ -50,14 +49,27 @@ export default function BallPitsPage() {
                   {pkg.featured && (
                     <span className={styles.featuredBadge}>Best Value</span>
                   )}
-                  <div
-                    className={styles.packageImage}
-                    style={{
-                      backgroundColor: selectedColors[pkg.id] ? colorMap[selectedColors[pkg.id]] : "#F5EDE8",
-                      transition: "background-color 0.3s ease"
-                    }}
-                  >
-                    <ImagePlaceholder width="100%" height="100%" borderRadius="0" />
+                  <div className={styles.packageImage} style={{ position: "relative", overflow: "hidden" }}>
+                    {(() => {
+                      const imgMap = ballPitImages[pkg.id] ?? {};
+                      const src =
+                        (selectedColors[pkg.id] && imgMap[selectedColors[pkg.id]]) ||
+                        Object.values(imgMap)[0] ||
+                        null;
+                      return src ? (
+                        <Image
+                          src={src}
+                          alt={`${pkg.name}${selectedColors[pkg.id] ? " – " + selectedColors[pkg.id] : ""
+                            }`}
+                          fill
+                          style={{ objectFit: "cover", objectPosition: "bottom", transition: "opacity 0.35s ease" }}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority
+                        />
+                      ) : (
+                        <div style={{ width: "100%", height: "100%", backgroundColor: "#F5EDE8" }} />
+                      );
+                    })()}
                   </div>
                   <div className={styles.packageContent}>
                     <h3 className={styles.packageName}>{pkg.name}</h3>

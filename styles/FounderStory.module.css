@@ -17,6 +17,13 @@
   max-width: 400px;
 }
 
+.founderImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50% 50% var(--border-radius) var(--border-radius);
+}
+
 .content {
   max-width: 600px;
 }
@@ -43,6 +50,7 @@
   font-size: 1.25rem;
   font-style: italic;
   color: var(--color-text-primary);
+  text-align: left;
 }
 
 @media (max-width: 1199px) {
@@ -58,13 +66,32 @@
   }
 
   .container {
-    padding: 0 var(--section-padding-x-mobile);
+    padding: 0 24px;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
   .imageWrapper {
-    max-width: 280px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    order: -1;
+  }
+
+  .founderImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .signature {
+    text-align: left;
   }
 }

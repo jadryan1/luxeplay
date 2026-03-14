@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import styles from "@/styles/Hygiene.module.css";
 
 const hygienePoints = [
@@ -15,10 +15,13 @@ export default function Hygiene() {
     <section className={styles.hygiene}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <ImagePlaceholder
-            width="100%"
-            height="500px"
-            borderRadius="var(--border-radius)"
+          <Image
+            src="/assets/images/cleanliness.jpg"
+            alt="Pristine play equipment in showroom condition"
+            width={800}
+            height={600}
+            sizes="(max-width: 767px) 100vw, 50vw"
+            className={styles.hygieneImage}
           />
         </div>
         <div className={styles.content}>

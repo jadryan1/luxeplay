@@ -1,32 +1,30 @@
 .button {
-    width: 100%;
-    padding: 14px 24px;
+    width: auto;
+    padding: 10px 28px;
     font-family: var(--font-raleway);
     font-size: 0.8125rem;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--color-text-primary);
-    background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #FDCBE2;
+    border: none;
     border-radius: 0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, background 0.25s ease;
 }
 
 .button:hover:not(:disabled) {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
+    opacity: 0.82;
 }
 
 .button:disabled {
-    opacity: 0.4;
+    opacity: 0.35;
     cursor: not-allowed;
 }
 
 .button.inCart,
 .button.added {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
-    background: rgba(212, 175, 55, 0.06);
+    background: #f0b8d4;
+    color: var(--color-text-primary);
 }

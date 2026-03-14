@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-[160px] md:pt-[160px]">
         <ContactForm />
       </main>
       <Footer />

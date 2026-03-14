@@ -1,47 +1,80 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Accordion from "@/components/ui/Accordion";
-import { Metadata } from "next";
+import Button from "@/components/ui/Button";
+import styles from "@/styles/FAQPage.module.css";
 
-export const metadata: Metadata = {
-    title: "Frequently Asked Questions | Luxe Play NY",
-    description: "Got questions? We have answers. Learn more about Luxe Play NY's soft play and ball pit rentals, service areas, and booking process.",
-};
-
-const faqs = [
-    { q: "What is Soft Play?", a: "Soft Play is foam-padded play equipment that creates a structured, stimulating and safe interactive environment for young children ages 0-5 years old. Allows for exploration, learning, independence and encourages social and physical development." },
-    { q: "What ages are appropriate for your Soft Play and Ball Pit Rentals?", a: "The recommended ages for our softplay set-ups are 0-5 years. Our ball pit rentals come in different sizes suitable for crawlers up to young adults." },
-    { q: "How often and what do you use to clean your equipment?", a: "Each piece of equipment is carefully cleansed and sanitized before and after your event. We use an eco-friendly disinfectant product that kills up to 99.9% of viruses (EPA-approved to kill novel corona virus), bacteria and fungus with pure non-toxic, no chemical residue and natural ingredients that are safe for all children." },
-    { q: "What areas do you deliver to and is there a delivery fee?", a: "We service New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania — anywhere within a 3-hour radius of Fairfield, NJ. Delivery fee will be determined once we confirm your event location and logistical needs." },
-    { q: "Are your soft play rentals for indoor only?", a: "Our Soft Play rentals are commercial grade for both indoor and outdoor use. Outdoor events are possible with weather permitting, as well as leveled outdoor ground." },
-    { q: "How do I start planning?", a: "Use the Start Planning flow on our website to submit your event details. From there, we'll reach out to confirm everything on a quick call." },
-    { q: "Do you require a deposit?", a: "Yes, a 25% deposit of your grand total is required to secure your event date. Due to high demand, we do not hold dates." },
-    { q: "Do you assemble and break down the equipment?", a: "Yes, we provide White Glove assembly and breakdown on the day of your event. We coordinate appropriate time frames with the client. Assembly and breakdown each require 30-90 minutes depending on package size." },
-    { q: "How many hours can I book?", a: "Rentals are based on a standard 4-hour single day rental. Additional hours start at $75/hr." },
-    { q: "Which payment methods do you accept?", a: "We accept Zelle, Venmo, PayPal, Apple Pay, Credit Cards, and cash." },
-    { q: "When is the final balance due?", a: "Final balance is required 48 hours prior to your event date by 6pm." },
-    { q: "Is Luxe Play licensed and insured?", a: "Yes, we are both licensed and insured." },
+const faqItems = [
+    {
+        question: "How far in advance should I book?",
+        answer: "We recommend booking at least 2-3 weeks in advance for weekday events and 4-6 weeks for weekend events, especially during peak season (spring and fall). For holiday weekends and December events, we suggest booking 2-3 months ahead. However, we always try to accommodate last-minute requests when our schedule allows.",
+    },
+    {
+        question: "What is your service area?",
+        answer: "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania — anywhere within a 3-hour radius of Fairfield, NJ.",
+    },
+    {
+        question: "What's included in the rental?",
+        answer: "Every rental includes delivery, professional setup, styling, and breakdown. We arrive early to ensure everything is perfectly positioned and stay until after setup is complete. We return at your designated time for seamless pickup. All equipment is professionally cleaned and sanitized before each event.",
+    },
+    {
+        question: "How do you ensure cleanliness?",
+        answer: "Cleanliness is our top priority. Every piece of equipment goes through our multi-step sanitization process including individual ball washing, UV sanitization, and hospital-grade surface disinfection. We use only non-toxic, child-safe cleaning products and store all equipment in our climate-controlled facility.",
+    },
+    {
+        question: "Can you match my event's color scheme?",
+        answer: "Absolutely! Our packages feature neutral and pastel palettes that complement most event aesthetics. We offer various ball pit color options including all-white, blush pink, sage green, and custom mixes. During your consultation, we'll discuss your vision and recommend the perfect combination.",
+    },
+    {
+        question: "What are your cancellation policies?",
+        answer: "We understand plans can change. Cancellations made 14+ days before your event receive a full refund minus a small processing fee. Cancellations 7-13 days out receive a 50% refund. Within 7 days, we offer credit toward a future booking. We also offer event date changes with no penalty when possible.",
+    },
+    {
+        question: "Do you offer styling services?",
+        answer: "Yes! Basic styling is included with every rental—we ensure your setup looks Instagram-perfect. For clients wanting an elevated experience, we offer premium styling packages that include custom balloon arrangements, coordinated accessories, and design consultation with our creative team.",
+    },
+    {
+        question: "Is setup and breakdown included?",
+        answer: "Yes, full-service setup and breakdown are included in every package. Our professional team handles everything from delivery to final placement. We typically need 30-60 minutes for setup depending on the package size. Just tell us your event timeline, and we'll work around it.",
+    },
 ];
 
 export default function FAQPage() {
     return (
         <>
             <Header />
-            <main style={{ minHeight: "100vh", backgroundColor: "#FFFFFF", paddingTop: "100px" }}>
-                {/* Header Block */}
-                <section className="w-full py-16 text-center" style={{ backgroundColor: '#F5EDE8' }}>
-                    <p className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: '#C4909A', fontFamily: 'Raleway', fontWeight: 400 }}>
-                        Got Questions
-                    </p>
-                    <h1 className="text-4xl md:text-5xl tracking-[0.1em] uppercase" style={{ color: '#3D2E2E', fontFamily: 'Raleway', fontWeight: 500 }}>
-                        We Have Answers
-                    </h1>
+            <main className="bg-white min-h-screen pt-[120px]">
+                {/* Hero Section */}
+                <section className={styles.hero}>
+                    <div className={styles.heroContent}>
+                        <span className={styles.label}>
+                            FAQS
+                        </span>
+                        <h1 className={styles.title}>
+                            EVERYTHING YOU NEED TO KNOW
+                        </h1>
+                        <p className={styles.subtitle}>
+                            Quick answers to our most common questions — if you don't see yours, reach out directly.
+                        </p>
+                    </div>
                 </section>
 
-                {/* FAQ Content */}
-                <section style={{ padding: "80px 24px" }}>
-                    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-                        <Accordion items={faqs.map(f => ({ question: f.q, answer: f.a }))} />
+                {/* FAQ Section */}
+                <section className={styles.faqSection}>
+                    <div className={styles.faqContainer}>
+                        <Accordion items={faqItems} />
+                    </div>
+                </section>
+
+                {/* Bottom CTA */}
+                <section className={styles.cta}>
+                    <div className={styles.ctaContainer}>
+                        <h2 className={styles.ctaTitle}>
+                            STILL HAVE QUESTIONS?
+                        </h2>
+                        <Button href="/contact" variant="primary">
+                            START PLANNING
+                        </Button>
                     </div>
                 </section>
             </main>

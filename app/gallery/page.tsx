@@ -88,6 +88,7 @@ export default function GalleryPage() {
                       alt={`${theme.name} luxury children's party setup by Luxe Play NY`}
                       width={600}
                       height={750}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                     <span

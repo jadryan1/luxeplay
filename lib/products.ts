@@ -200,6 +200,33 @@ export const elitePackages: Product[] = [
     },
 ];
 
+// ---- BALL PIT IMAGE MAP ----
+// Maps product id → color name → public image path
+export const ballPitImages: Record<string, Record<string, string>> = {
+    "deluxe-play": {
+        "White": "/assets/BallPits/deluxeplay/deluxe_white.jpeg",
+        "Blush": "/assets/BallPits/deluxeplay/deluxe_blush.jpeg",
+        "Nude": "/assets/BallPits/deluxeplay/deluxe_nude.jpeg",
+        "Sky Blue": "/assets/BallPits/deluxeplay/deluxe_blue.jpeg",
+        "Lavender": "/assets/BallPits/deluxeplay/deluxe_lavender.jpg",
+    },
+    "supreme-play": {
+        "Black": "/assets/BallPits/supremeplay/suprme_black.jpg",
+        "Hot Pink": "/assets/BallPits/supremeplay/supreme_pink.jpeg",
+        "Red": "/assets/BallPits/supremeplay/supreme_red.jpg",
+    },
+    "plush-play": {
+        "Pink": "/assets/BallPits/plushplay/plush_pink.jpeg",
+        "Forest Green": "/assets/BallPits/plushplay/plush_green.jpeg",
+        "Cream": "/assets/BallPits/plushplay/plush_cream.jpeg",
+        "White": "/assets/BallPits/plushplay/plush_white.jpeg",
+    },
+    "grand-play": {
+        "White": "/assets/BallPits/grandplay/grand_white.jpg",
+        "Lavender": "/assets/BallPits/grandplay/grand_lavender.jpg",
+    },
+};
+
 // ---- ADD-ONS ----
 export const addOns: Product[] = [
     { id: "toddler-bounce", name: "Toddler Bounce House", price: 700, priceLabel: "$700", category: "add-on", colors: [] },

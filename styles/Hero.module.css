@@ -1,75 +1,78 @@
-/* Full-Viewport Hero */
+/* Text-Based Hero — LuxePlay Brand */
 .hero {
   position: relative;
-  width: 100vw;
-  height: calc(100vh - 160px);
-  margin-top: 160px;
-  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px var(--section-padding-x) 160px;
+  min-height: 70vh;
   overflow: hidden;
+
+  /* Taupe background with soft radial warmth */
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(255, 229, 212, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(253, 203, 226, 0.2) 0%, transparent 55%),
+    var(--color-section-break);
 }
 
-/* Background Image */
-.heroImage {
-  object-fit: cover;
-  object-position: center;
+/* Subtle dot-pattern texture overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(61, 46, 46, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
   z-index: 0;
 }
 
-/* Brand-Tinted Overlay */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(253, 203, 226, 0.25);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Text Content — Bottom Left */
+/* Content — centered flow layout */
 .content {
-  position: absolute;
-  bottom: 80px;
-  left: var(--section-padding-x);
-  z-index: 2;
-  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Eyebrow */
 .eyebrow {
   display: block;
   font-family: var(--font-raleway);
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 16px;
+  letter-spacing: 0.3em;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
 }
 
-/* Headline — Display/Hero weight */
+/* Headline — oversized for visual weight */
 .headline {
   font-family: var(--font-raleway);
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 200;
   line-height: 1.05;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #FFFFFF;
-  margin-bottom: 24px;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
 }
 
 /* Subheading */
 .heroSubheading {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 40px;
-  max-width: 540px;
-  font-weight: 300;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 48px;
+  max-width: 580px;
+  font-weight: 400;
 }
 
-/* Ghost / Outline CTA Button */
+/* Solid CTA Button — dark on pink */
 .ctaBtn {
   display: inline-block;
   font-family: var(--font-raleway);
@@ -77,46 +80,54 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #FFFFFF;
+  color: var(--color-text-primary);
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  padding: 16px 48px;
+  border: 2px solid var(--color-text-primary);
+  padding: 18px 56px;
   border-radius: 0;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .ctaBtn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #FFFFFF;
+  background: var(--color-text-primary);
+  color: var(--color-sweet-dreams);
   transform: translateY(-2px);
 }
 
 /* ---- Responsive ---- */
 
 @media (max-width: 991px) {
+  .hero {
+    padding: 120px var(--section-padding-x) 130px;
+    min-height: 60vh;
+  }
+
   .headline {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 }
 
 @media (max-width: 767px) {
   .hero {
-    min-height: 500px;
+    padding: 100px var(--section-padding-x-mobile) 110px;
+    min-height: auto;
   }
 
   .content {
-    bottom: 60px;
-    left: var(--section-padding-x-mobile);
-    right: var(--section-padding-x-mobile);
+    max-width: 100%;
   }
 
   .headline {
-    font-size: 2.75rem;
+    font-size: 3rem;
+  }
+
+  .heroSubheading {
+    font-size: 1.05rem;
   }
 
   .ctaBtn {
-    padding: 14px 36px;
+    padding: 16px 40px;
     font-size: 0.8125rem;
   }
 }

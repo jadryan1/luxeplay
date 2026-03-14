@@ -1,0 +1,84 @@
+.hero {
+    padding: var(--section-padding-y) 0;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--section-padding-x);
+    text-align: left;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-text-primary);
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+}
+
+.faqSection {
+    padding-bottom: var(--section-padding-y);
+}
+
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--section-padding-x);
+}
+
+.cta {
+    background-color: rgba(253, 203, 226, 0.2);
+    padding: 100px 0;
+}
+
+.ctaContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--section-padding-x);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctaTitle {
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+
+    .heroContent,
+    .faqContainer,
+    .ctaContainer {
+        padding: 0 var(--section-padding-x-mobile);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.75rem;
+    }
+
+    .cta {
+        padding: 60px 0;
+    }
+}
