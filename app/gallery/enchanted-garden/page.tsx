@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/Fairy Theme/fairy1.jpg",
-    "/assets/themes/Fairy Theme/fairy2.jpg",
-    "/assets/themes/Fairy Theme/fairy3.jpg",
-    "/assets/themes/Fairy Theme/fairy4.jpg",
-    "/assets/themes/Fairy Theme/fairy5.jpg",
-    "/assets/themes/Fairy Theme/fairy6.jpg",
-    "/assets/themes/Fairy Theme/fairy7.jpg",
-    "/assets/themes/Fairy Theme/fairy8.jpg",
-    "/assets/themes/Fairy Theme/fairy9.jpg",
+    "/assets/Themes/Fairy Theme/fairy1.jpg",
+    "/assets/Themes/Fairy Theme/fairy2.jpg",
+    "/assets/Themes/Fairy Theme/fairy3.jpg",
+    "/assets/Themes/Fairy Theme/fairy4.jpg",
+    "/assets/Themes/Fairy Theme/fairy5.jpg",
+    "/assets/Themes/Fairy Theme/fairy6.jpg",
+    "/assets/Themes/Fairy Theme/fairy7.jpg",
+    "/assets/Themes/Fairy Theme/fairy8.jpg",
+    "/assets/Themes/Fairy Theme/fairy9.jpg",
 ];
 
 const featuredItems = [

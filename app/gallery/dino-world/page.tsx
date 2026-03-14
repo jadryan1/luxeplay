@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/Jurassic Theme/jurassic1.jpg",
-    "/assets/themes/Jurassic Theme/jurassic2.jpg",
-    "/assets/themes/Jurassic Theme/jurassic3.jpg",
-    "/assets/themes/Jurassic Theme/jurassic4.jpg",
-    "/assets/themes/Jurassic Theme/jurassic5.jpg",
-    "/assets/themes/Jurassic Theme/jurassic6.jpg",
-    "/assets/themes/Jurassic Theme/jurassic7.jpg",
-    "/assets/themes/Jurassic Theme/jurassic8.jpg",
-    "/assets/themes/Jurassic Theme/jurassic9.jpg",
-    "/assets/themes/Jurassic Theme/jurassic10.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic1.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic2.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic3.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic4.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic5.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic6.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic7.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic8.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic9.jpg",
+    "/assets/Themes/Jurassic Theme/jurassic10.jpg",
 ];
 
 const featuredItems = [

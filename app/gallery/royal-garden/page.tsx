@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/Princess Castle Theme/princess1.png",
-    "/assets/themes/Princess Castle Theme/princess2.jpg",
-    "/assets/themes/Princess Castle Theme/princess3.jpg",
-    "/assets/themes/Princess Castle Theme/princess4.jpg",
-    "/assets/themes/Princess Castle Theme/princess5.jpg",
-    "/assets/themes/Princess Castle Theme/princess6.jpg",
-    "/assets/themes/Princess Castle Theme/princess7.jpg",
-    "/assets/themes/Princess Castle Theme/princess8.jpg",
+    "/assets/Themes/Princess Castle Theme/princess1.png",
+    "/assets/Themes/Princess Castle Theme/princess2.jpg",
+    "/assets/Themes/Princess Castle Theme/princess3.jpg",
+    "/assets/Themes/Princess Castle Theme/princess4.jpg",
+    "/assets/Themes/Princess Castle Theme/princess5.jpg",
+    "/assets/Themes/Princess Castle Theme/princess6.jpg",
+    "/assets/Themes/Princess Castle Theme/princess7.jpg",
+    "/assets/Themes/Princess Castle Theme/princess8.jpg",
 ];
 
 const featuredItems = [

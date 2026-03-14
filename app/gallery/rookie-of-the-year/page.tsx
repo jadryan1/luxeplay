@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/Baseball Theme/baseball1.jpg",
-    "/assets/themes/Baseball Theme/baseball2.jpg",
-    "/assets/themes/Baseball Theme/baseball3.jpg",
-    "/assets/themes/Baseball Theme/baseball4.jpg",
-    "/assets/themes/Baseball Theme/baseball5.jpg",
-    "/assets/themes/Baseball Theme/baseball6.jpg",
-    "/assets/themes/Baseball Theme/baseball7.jpg",
-    "/assets/themes/Baseball Theme/baseball8.jpg",
+    "/assets/Themes/Baseball Theme/baseball1.jpg",
+    "/assets/Themes/Baseball Theme/baseball2.jpg",
+    "/assets/Themes/Baseball Theme/baseball3.jpg",
+    "/assets/Themes/Baseball Theme/baseball4.jpg",
+    "/assets/Themes/Baseball Theme/baseball5.jpg",
+    "/assets/Themes/Baseball Theme/baseball6.jpg",
+    "/assets/Themes/Baseball Theme/baseball7.jpg",
+    "/assets/Themes/Baseball Theme/baseball8.jpg",
 ];
 
 const featuredItems = [

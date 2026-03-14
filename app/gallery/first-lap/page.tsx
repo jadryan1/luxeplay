@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/Race Theme/race1.jpg",
-    "/assets/themes/Race Theme/race2.jpg",
-    "/assets/themes/Race Theme/race3.jpg",
-    "/assets/themes/Race Theme/race4.jpg",
-    "/assets/themes/Race Theme/race5.jpg",
-    "/assets/themes/Race Theme/race6.jpg",
-    "/assets/themes/Race Theme/race7.jpg",
-    "/assets/themes/Race Theme/race8.jpg",
-    "/assets/themes/Race Theme/race9.jpg",
-    "/assets/themes/Race Theme/race10.jpg",
+    "/assets/Themes/Race Theme/race1.jpg",
+    "/assets/Themes/Race Theme/race2.jpg",
+    "/assets/Themes/Race Theme/race3.jpg",
+    "/assets/Themes/Race Theme/race4.jpg",
+    "/assets/Themes/Race Theme/race5.jpg",
+    "/assets/Themes/Race Theme/race6.jpg",
+    "/assets/Themes/Race Theme/race7.jpg",
+    "/assets/Themes/Race Theme/race8.jpg",
+    "/assets/Themes/Race Theme/race9.jpg",
+    "/assets/Themes/Race Theme/race10.jpg",
 ];
 
 const featuredItems = [

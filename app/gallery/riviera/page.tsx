@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const images = [
-    "/assets/themes/BeachClub Theme/beach1.jpg",
-    "/assets/themes/BeachClub Theme/beach2.jpg",
-    "/assets/themes/BeachClub Theme/beach3.jpg",
-    "/assets/themes/BeachClub Theme/beach4.jpg",
-    "/assets/themes/BeachClub Theme/beach5.jpg",
-    "/assets/themes/BeachClub Theme/beach6.jpg",
-    "/assets/themes/BeachClub Theme/beach7.jpg",
-    "/assets/themes/BeachClub Theme/beach8.jpg",
-    "/assets/themes/BeachClub Theme/beach9.jpg",
-    "/assets/themes/BeachClub Theme/beach10.jpg",
-    "/assets/themes/BeachClub Theme/beach11.jpg",
-    "/assets/themes/BeachClub Theme/beach12.jpg",
+    "/assets/Themes/BeachClub Theme/beach1.jpg",
+    "/assets/Themes/BeachClub Theme/beach2.jpg",
+    "/assets/Themes/BeachClub Theme/beach3.jpg",
+    "/assets/Themes/BeachClub Theme/beach4.jpg",
+    "/assets/Themes/BeachClub Theme/beach5.jpg",
+    "/assets/Themes/BeachClub Theme/beach6.jpg",
+    "/assets/Themes/BeachClub Theme/beach7.jpg",
+    "/assets/Themes/BeachClub Theme/beach8.jpg",
+    "/assets/Themes/BeachClub Theme/beach9.jpg",
+    "/assets/Themes/BeachClub Theme/beach10.jpg",
+    "/assets/Themes/BeachClub Theme/beach11.jpg",
+    "/assets/Themes/BeachClub Theme/beach12.jpg",
 ];
 
 const featuredItems = [
