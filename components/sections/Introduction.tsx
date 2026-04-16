@@ -21,13 +21,13 @@ export default function Introduction() {
             </p>
             <p>
               Founded by a Manhattan mom who understands that luxury isn&apos;t just
-              about looks—it&apos;s about safety, cleanliness, and creating memories
+               about looks. It&apos;s about safety, cleanliness, and creating memories
               that last. Every piece in our collection is meticulously
               sanitized, professionally styled, and designed to complement even
               the most sophisticated spaces.
             </p>
           </div>
-          <Button variant="secondary" href="/collections">
+          <Button variant="secondary" href="/packages">
             View Our Packages
           </Button>
         </div>

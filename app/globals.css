@@ -56,6 +56,12 @@
   --transition-fast: 0.15s ease;
 }
 
+html,
+body {
+  background-color: #f5ede8; /* site taupe — prevents white overscroll bleed */
+  overscroll-behavior: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -64,7 +70,7 @@ body {
   font-family: var(--font-raleway);
   font-weight: 400;
   color: var(--color-text-primary);
-  background-color: var(--color-white);
+  background-color: #f5ede8;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

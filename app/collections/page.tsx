@@ -6,6 +6,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import AddToEstimate from "@/components/ui/AddToEstimate";
 import { addOns } from "@/lib/products";
+import Button from "@/components/ui/Button";
 import styles from "@/styles/CollectionsPage.module.css";
 import Link from "next/link";
 
@@ -64,7 +65,6 @@ const services = [
       "The ultimate, all-encompassing world of play where every detail is flawlessly curated. This premium bundle unites a sweeping soft play landscape, a deluxe ball pit, and a matching boutique bounce house. Curated for the ultimate milestone celebration and the parent who wants an uncompromised, breathtaking impact.",
     highlights: [
       "4 elite packages from $2,450 – $3,250",
-      "Save $100–$125 vs. à la carte",
       "Includes personalization",
       "Toddler bounce included",
     ],
@@ -90,7 +90,7 @@ export default function PackagesPage() {
             <Eyebrow>OUR PACKAGES</Eyebrow>
             <h1>Luxury Play Experiences</h1>
             <p className={styles.heroSubtitle}>
-              Four ways to bring magic to your next event — choose your perfect experience
+              Four ways to bring magic to your next event. Choose your perfect experience.
             </p>
           </div>
         </section>
@@ -189,9 +189,9 @@ export default function PackagesPage() {
               We love creating bespoke experiences. Tell us your vision and
               we&apos;ll design a custom package just for you.
             </p>
-            <a href="/contact" className={styles.viewLink}>
-              Start Planning →
-            </a>
+            <Button variant="primary" size="large" href="/contact">
+              Start Planning
+            </Button>
           </div>
         </section>
       </main>

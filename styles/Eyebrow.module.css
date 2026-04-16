@@ -2,14 +2,14 @@
   display: block;
   font-family: var(--font-raleway);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 .gold {
-  color: #C4909A;
+  color: var(--color-text-primary);
 }
 
 .dark {

@@ -23,7 +23,7 @@ export default function FounderStory() {
           </h2>
           <div className={styles.body}>
             <p>
-              Gabriela and Anny didn&apos;t set out to build a business — they set out to
+              Gabriela and Anny didn&apos;t set out to build a business. They set out to
               build the kind of celebrations their own children deserved. The kind
               where every detail is intentional, every corner is beautiful, and every
               child feels like the star of the show.
@@ -35,11 +35,11 @@ export default function FounderStory() {
               an immediate yes, it gets elevated until it is.
             </p>
             <p>
-              LuxePlay NY was born from that obsession — and it shows in every
+              LuxePlay NY was born from that obsession, and it shows in every
               celebration they touch.
             </p>
           </div>
-          <p className={styles.signature}>— Gabriela &amp; Anny</p>
+          <p className={styles.signature}>Gabriela &amp; Anny</p>
         </div>
       </div>
     </section>

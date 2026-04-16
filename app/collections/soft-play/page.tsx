@@ -35,7 +35,7 @@ export default function SoftPlayPage() {
             <Eyebrow>SOFT PLAY PACKAGES</Eyebrow>
             <h1>The Complete Play Experience</h1>
             <p className={styles.heroSubtitle}>
-              Everything you need for an unforgettable event — ball pit, tunnel, slide,
+              Everything you need for an unforgettable event: ball pit, tunnel, slide,
               blocks, and more. Four packages to fit your space and style.
             </p>
             <p className={styles.heroPrice}>Starting at $1,475</p>
@@ -149,7 +149,7 @@ export default function SoftPlayPage() {
             <h2>Ready for the Luxe Experience?</h2>
             <p>
               Let&apos;s design the perfect play experience for your event.
-              Most inquiries answered within 2 hours.
+              Inquiries answered within 24 hours.
             </p>
             <div className={styles.ctaButtons}>
               <a href="/contact" className={styles.ctaLink}>

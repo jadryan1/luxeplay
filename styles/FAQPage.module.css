@@ -1,5 +1,6 @@
 .hero {
     padding: var(--section-padding-y) 0;
+    background-color: var(--color-section-break);
 }
 
 .heroContent {
@@ -41,7 +42,7 @@
 }
 
 .cta {
-    background-color: rgba(253, 203, 226, 0.2);
+    background-color: #f9e8f1; /* solid equivalent of the previous semi-transparent pink */
     padding: 100px 0;
 }
 

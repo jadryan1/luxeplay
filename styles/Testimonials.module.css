@@ -1,6 +1,6 @@
 .testimonials {
   background-color: var(--color-white);
-  padding: var(--section-padding-y) 0;
+  padding: 40px 0;
 }
 
 .container {
@@ -49,7 +49,7 @@
 .testimonialCard {
   max-width: 700px;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 0;
   padding: 48px 40px;
   background-color: rgba(253, 203, 226, 0.35);
 }

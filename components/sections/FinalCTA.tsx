@@ -16,7 +16,7 @@ export default function FinalCTA() {
           </Button>
         </div>
         <p className={styles.responseTime}>
-          Most inquiries answered within 2 hours
+          Inquiries answered within 24 hours
         </p>
         <div className={styles.contactInfo}>
           <a href="mailto:info@luxeplayny.com" className={styles.contactLink}>

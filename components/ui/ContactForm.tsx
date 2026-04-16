@@ -340,7 +340,7 @@ export default function ContactForm() {
                         <h2 className={styles.question}>Anything else we should know?</h2>
                         <textarea
                             className={styles.textArea}
-                            placeholder="Venue details, special requests, theme inspiration — anything that helps us prepare."
+                            placeholder="Venue details, special requests, theme inspiration, and anything else that helps us prepare."
                             value={form.notes}
                             onChange={(e) => update("notes", e.target.value)}
                             rows={4}

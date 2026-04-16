@@ -50,6 +50,12 @@
   color: var(--color-text-secondary);
 }
 
+.list li::before {
+  content: "▪";
+  flex-shrink: 0;
+  color: var(--color-text-primary);
+}
+
 .sparkle {
   font-size: 1rem;
   flex-shrink: 0;

@@ -8,28 +8,28 @@ const services = [
     title: "Soft Play Packages",
     price: "Starting at $1,475",
     features: "Complete soft play setups with ball pit, tunnel, slide & more",
-    href: "/collections/soft-play",
+    href: "/packages/soft-play",
     imageSrc: "/assets/images/truck_softplay.png",
   },
   {
     title: "Ball Pits",
     price: "Starting at $975",
     features: "Standalone luxury ball pits in various sizes and colors",
-    href: "/collections/ball-pits",
+    href: "/packages/ball-pits",
     imageSrc: "/assets/images/pinkballpit.png",
   },
   {
     title: "Bounce House",
     price: "Starting at $1,000",
     features: "Premium bounce houses with optional slide combos",
-    href: "/collections/bounce-house",
+    href: "/packages/bounce-house",
     imageSrc: "/assets/images/matos_bouncehouse.png",
   },
   {
     title: "Elite Packages",
     price: "Starting at $2,450",
-    features: "All-inclusive Luxe Play experience with maximum savings",
-    href: "/collections/elite",
+    features: "The complete all-inclusive Luxe Play experience",
+    href: "/packages/elite",
     imageSrc: "/assets/images/pink_elitepack.png",
   },
 ];
@@ -42,7 +42,7 @@ export default function Collections() {
           <Eyebrow>OUR PACKAGES</Eyebrow>
           <h2 className={styles.sectionTitle}>Luxury Play Experiences</h2>
           <p className={styles.subtext}>
-            Four ways to bring magic to your next event — choose your perfect experience
+            Four ways to bring magic to your next event. Choose your perfect experience.
           </p>
         </div>
         <div className={styles.grid}>
@@ -60,7 +60,7 @@ export default function Collections() {
           ))}
         </div>
         <div className={styles.cta}>
-          <Button variant="secondary" href="/collections">
+          <Button variant="secondary" href="/packages">
             View All Packages
           </Button>
         </div>

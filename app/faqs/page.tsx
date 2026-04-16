@@ -1,8 +1,15 @@
+import { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import styles from "@/styles/FAQPage.module.css";
+
+export const metadata: Metadata = {
+  title: "FAQs | LuxePlay NY Luxury Kids Party Rentals | NYC, NJ, CT & PA",
+  description:
+    "Find answers to common questions about LuxePlay NY's luxury soft play and ball pit rentals. Learn about our service area (New York, New Jersey, Connecticut, Pennsylvania), booking process, cleanliness standards, and what's included in every rental.",
+};
 
 const faqItems = [
     {
@@ -11,7 +18,7 @@ const faqItems = [
     },
     {
         question: "What is your service area?",
-        answer: "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania — anywhere within a 3-hour radius of Fairfield, NJ.",
+        answer: "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania. We serve anywhere within a 3-hour radius of Fairfield, NJ.",
     },
     {
         question: "What's included in the rental?",
@@ -31,7 +38,7 @@ const faqItems = [
     },
     {
         question: "Do you offer styling services?",
-        answer: "Yes! Basic styling is included with every rental—we ensure your setup looks Instagram-perfect. For clients wanting an elevated experience, we offer premium styling packages that include custom balloon arrangements, coordinated accessories, and design consultation with our creative team.",
+        answer: "Yes! Basic styling is included with every rental. We ensure your setup looks Instagram-perfect. For clients wanting an elevated experience, we offer premium styling packages that include custom balloon arrangements, coordinated accessories, and design consultation with our creative team.",
     },
     {
         question: "Is setup and breakdown included?",
@@ -43,7 +50,7 @@ export default function FAQPage() {
     return (
         <>
             <Header />
-            <main className="bg-white min-h-screen pt-[120px]">
+            <main>
                 {/* Hero Section */}
                 <section className={styles.hero}>
                     <div className={styles.heroContent}>
@@ -54,7 +61,7 @@ export default function FAQPage() {
                             EVERYTHING YOU NEED TO KNOW
                         </h1>
                         <p className={styles.subtitle}>
-                            Quick answers to our most common questions — if you don't see yours, reach out directly.
+                            Quick answers to our most common questions. If you don't see yours, reach out directly.
                         </p>
                     </div>
                 </section>

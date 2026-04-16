@@ -6,7 +6,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-radius: 50px;
+  border-radius: 0;
   transition: all var(--transition-default);
   cursor: pointer;
   text-decoration: none;
@@ -28,12 +28,12 @@
 
 .secondary {
   background-color: var(--color-white);
-  color: var(--color-gold);
-  border: 2px solid var(--color-gold);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-primary);
 }
 
 .secondary:hover {
-  background-color: var(--color-gold);
+  background-color: var(--color-text-primary);
   color: var(--color-white);
 }
 

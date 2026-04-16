@@ -118,7 +118,7 @@ export default function BounceHousePage() {
             <h2>Ready for the Luxe Experience?</h2>
             <p>
               Let&apos;s design the perfect play experience for your event.
-              Most inquiries answered within 2 hours.
+              Inquiries answered within 24 hours.
             </p>
             <div className={styles.ctaButtons}>
               <a href="/contact" className={styles.ctaLink}>

@@ -24,7 +24,7 @@ export default function Footer() {
                   <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/collections">Packages</Link>
+                  <Link href="/packages">Packages</Link>
                 </li>
                 <li>
                   <Link href="/gallery">Gallery</Link>
@@ -58,16 +58,16 @@ export default function Footer() {
               <h4 className={styles.columnTitle}>Services</h4>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/collections/soft-play">Soft Play Packages</Link>
+                  <Link href="/packages/soft-play">Soft Play Packages</Link>
                 </li>
                 <li>
-                  <Link href="/collections/ball-pits">Ball Pits</Link>
+                  <Link href="/packages/ball-pits">Ball Pits</Link>
                 </li>
                 <li>
-                  <Link href="/collections/bounce-house">Bounce House</Link>
+                  <Link href="/packages/bounce-house">Bounce House</Link>
                 </li>
                 <li>
-                  <Link href="/collections/elite">Elite Packages</Link>
+                  <Link href="/packages/elite">Elite Packages</Link>
                 </li>
               </ul>
             </div>

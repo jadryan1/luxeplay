@@ -27,23 +27,17 @@ const TikTokIcon = () => (
   </svg>
 );
 
-const aboutSubmenu = [
-  { href: "/about#team", label: "Our Team" },
-  { href: "/about#process", label: "Our Process" },
-];
-
 const collectionsSubmenu = [
-  { href: "/collections/soft-play", label: "Soft Play" },
-  { href: "/collections/ball-pits", label: "Ball Pits" },
-  { href: "/collections/bounce-house", label: "Bounce Houses" },
-  { href: "/collections/elite", label: "Elite Packages" },
+  { href: "/packages/soft-play", label: "Soft Play" },
+  { href: "/packages/ball-pits", label: "Ball Pits" },
+  { href: "/packages/bounce-house", label: "Bounce Houses" },
+  { href: "/packages/elite", label: "Elite Packages" },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
   const [collectionsOpen, setCollectionsOpen] = useState(false);
   const lastScrollY = useRef(0);
 
@@ -67,7 +61,6 @@ export default function Header() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-    setAboutOpen(false);
     setCollectionsOpen(false);
   };
 
@@ -151,32 +144,19 @@ export default function Header() {
                 HOME
               </Link>
             </li>
-            <li
-              className={styles.hasDropdown}
-              onMouseEnter={() => setAboutOpen(true)}
-              onMouseLeave={() => setAboutOpen(false)}
-            >
-              <span className={styles.navLink}>
-                ABOUT US <ChevronDown size={14} />
-              </span>
-              <ul className={`${styles.dropdown} ${aboutOpen ? styles.dropdownOpen : ""}`}>
-                {aboutSubmenu.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className={styles.dropdownLink}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <li>
+              <Link href="/about" className={styles.navLink}>
+                ABOUT US
+              </Link>
             </li>
             <li
               className={styles.hasDropdown}
               onMouseEnter={() => setCollectionsOpen(true)}
               onMouseLeave={() => setCollectionsOpen(false)}
             >
-              <span className={styles.navLink}>
+              <Link href="/packages" className={styles.navLink}>
                 PACKAGES <ChevronDown size={14} />
-              </span>
+              </Link>
               <ul className={`${styles.dropdown} ${collectionsOpen ? styles.dropdownOpen : ""}`}>
                 {collectionsSubmenu.map((item) => (
                   <li key={item.href}>
@@ -241,23 +221,9 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <button
-                  className={styles.mobileNavLink}
-                  onClick={() => setAboutOpen(!aboutOpen)}
-                >
-                  ABOUT US <ChevronDown size={16} className={aboutOpen ? styles.rotated : ""} />
-                </button>
-                {aboutOpen && (
-                  <ul className={styles.mobileSubmenu}>
-                    {aboutSubmenu.map((item) => (
-                      <li key={item.href}>
-                        <Link href={item.href} onClick={closeMenu}>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <Link href="/about" className={styles.mobileNavLink} onClick={closeMenu}>
+                  ABOUT US
+                </Link>
               </li>
               <li>
                 <button

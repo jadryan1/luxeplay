@@ -116,7 +116,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 10px 24px;
-  border-radius: 50px;
+  border-radius: 0;
   border: none;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -140,9 +140,8 @@
 /* ... existing code ... */
 
 .dropdownLink:hover {
-  background-color: var(--color-secondary-pink);
-  color: var(--color-white);
-  /* Assuming white text on darker pink */
+  background-color: var(--color-sweet-dreams);
+  color: var(--color-text-primary);
 }
 
 .header.scrolled .navBar {
@@ -223,7 +222,7 @@
   transform: translateX(-50%);
   background-color: var(--color-white);
   min-width: 200px;
-  border-radius: var(--border-radius-small);
+  border-radius: 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   opacity: 0;
   visibility: hidden;
@@ -251,9 +250,8 @@
 }
 
 .dropdownLink:hover {
-  background-color: var(--color-light-pink);
-  color: var(--color-gold);
-  /* Pink hover as requested */
+  background-color: var(--color-sweet-dreams);
+  color: var(--color-text-primary);
 }
 
 /* Mobile Menu Button */
@@ -414,7 +412,7 @@
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 0;
   text-shadow: none;
 }
 
@@ -433,11 +431,11 @@
 /* Mobile Styles */
 @media (max-width: 767px) {
   .topBar {
-    height: 80px;
+    height: 90px;
   }
 
   .header.scrolled .topBar {
-    height: 60px;
+    height: 70px;
   }
 
   .topBarContainer {
@@ -488,10 +486,12 @@
 
   /* Logo image resizing for mobile */
   .logoImage {
-    height: 120px;
+    height: 160px;
+    min-width: 160px;
   }
 
   .header.scrolled .logoImage {
-    height: 90px;
+    height: 130px;
+    min-width: 130px;
   }
 }

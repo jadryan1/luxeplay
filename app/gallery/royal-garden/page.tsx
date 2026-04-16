@@ -4,7 +4,7 @@ import ThemePageContent from "@/components/sections/ThemePageContent";
 export const metadata: Metadata = {
     title: "Royal Garden Party Setup | Luxe Play NY",
     description:
-        "See our Royal Garden event setup — Every little queen deserves a kingdom. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
+        "See our Royal Garden event setup. Every little queen deserves a kingdom. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
 };
 
 const images = [
@@ -33,10 +33,10 @@ export default function RoyalGardenPage() {
             tagline="Every little queen deserves a kingdom."
             gender="Girls"
             heroColor="#F2D9DE"
-            description="A kingdom built for one afternoon, remembered for years. Crown-topped balloon arches and regal table settings turn any space into a storybook court. Her royal day — designed with the kind of detail that makes parents proud."
+            description="A kingdom built for one afternoon, remembered for years. Crown-topped balloon arches and regal table settings turn any space into a storybook court. Her royal day, designed with the kind of detail that makes parents proud."
             featuredItems={featuredItems}
             images={images}
-            ctaBody="Royal Garden is a celebration fit for royalty. We'd love to build this kingdom — or your own custom vision — for your next event."
+            ctaBody="Royal Garden is a celebration fit for royalty. We'd love to build this kingdom, or your own custom vision, for your next event."
         />
     );
 }

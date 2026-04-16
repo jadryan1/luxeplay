@@ -9,33 +9,39 @@ import styles from "@/styles/Testimonials.module.css";
 const testimonials = [
   {
     quote:
-      "Absolutely stunning! The soft play matched our pastel theme perfectly and the service was impeccable. Worth every penny.",
-    author: "Alexandra M.",
-    event: "Upper East Side Birthday Celebration",
+      "Amazing entertainment for my family and friends! Thank you so much luxe play for an unforgettable experience!! Highly recommended",
+    author: "Amy Lynn",
+    event: "Deluxe Play",
   },
   {
     quote:
-      "As an event planner, I have high standards. Luxe Play NY exceeded them. The equipment is museum-quality and the team is professional.",
-    author: "Jennifer K.",
-    event: "Luxury Event Planner",
+      "From the moment my son saw the ball pit he went INSANE. A four hour long party and the kids were too entertained to even eat...I'm very delighted with my experience and really can't express how great this service was!",
+    author: "Yaritza Diaz",
+    event: "Blue Mini Play",
   },
   {
     quote:
-      "Finally, a rental company that understands aesthetic! The neutral tones blended beautifully with our baby shower decor.",
-    author: "Sarah P.",
-    event: "Tribeca Baby Shower",
+      "We had an amazing time, the kids were thrilled to have a ball pit in the party. It was all the entertainment they needed.",
+    author: "Vanessa Fiallos",
+    event: "Deluxe Ball Pit",
   },
   {
     quote:
-      "The attention to detail is remarkable. From the pristine equipment to the seamless setup, everything was perfect for my daughter's first birthday.",
-    author: "Michelle R.",
-    event: "SoHo First Birthday Party",
+      "Absolutely wonderful! The team, and the quality of the playset and everything about the Luxe mini was perfect. The dedication to their customer service and quality was outstanding! Can't wait to use them again.",
+    author: "Alexandra Monteleone",
+    event: "Luxe Mini",
   },
   {
     quote:
-      "We've used Luxe Play NY for three events now. Consistent quality, reliable service, and always a hit with the kids and parents alike.",
-    author: "David & Emma T.",
-    event: "Central Park West Family",
+      "I love love love luxe play! Back in March I celebrated my daughters first birthday party and while planning I seen a few different soft play areas for rent but I knew I had to have luxe for play. It gives that chic look, they were super prompt and professional from the start...",
+    author: "Tiara Austin",
+    event: "Deluxe Play Upgraded",
+  },
+  {
+    quote:
+      "We hired Luxe Play for my daughters birthday and everything was amazing! They were very professional and took the time to add every small detail to make my daughters birthday special! I recommend using Luxe Play for your next event! You won't regret it!",
+    author: "Neethu Mavumkal",
+    event: "Luxe Play",
   },
 ];
 

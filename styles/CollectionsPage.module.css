@@ -1,5 +1,4 @@
 .collectionsPage {
-  padding-top: 160px;
 }
 
 .container {
@@ -18,6 +17,7 @@
 .hero h1 {
   max-width: 600px;
   margin: 0 auto 20px;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .heroSubtitle {
@@ -67,10 +67,10 @@
   display: inline-block;
   font-family: var(--font-raleway);
   font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--color-gold);
-  background: #ffffff;
-  border-radius: 999px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: #f9c8d9;
+  border-radius: 0;
   padding: 6px 20px;
   margin-bottom: 20px;
 }
@@ -107,6 +107,15 @@
   transition: transform var(--transition-default);
 }
 
+.realImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
 .collectionImage:hover {
   transform: scale(1.02);
 }
@@ -120,7 +129,7 @@
 }
 
 .meta span:nth-child(2) {
-  color: var(--color-accent-pink);
+  color: var(--color-text-secondary);
 }
 
 /* Add-ons */
@@ -218,14 +227,15 @@
 }
 
 .customCta p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-primary);
+  font-weight: 600;
   max-width: 500px;
   margin: 0 auto 32px;
 }
 
 .customCta a {
   background-color: var(--color-white);
-  color: var(--color-gold);
+  color: var(--color-text-primary);
   border-color: var(--color-white);
 }
 
@@ -234,6 +244,8 @@
   color: var(--color-white);
   border-color: var(--color-charcoal);
 }
+
+
 
 /* View Link */
 .viewLink {
@@ -244,7 +256,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: var(--color-gold);
+  color: var(--color-text-primary);
   transition: opacity 0.2s ease;
 }
 
@@ -264,7 +276,6 @@
 
 @media (max-width: 767px) {
   .collectionsPage {
-    padding-top: 0;
   }
 
   .container {
@@ -272,7 +283,7 @@
   }
 
   .hero {
-    padding: 60px 0;
+    padding: 48px 0 44px;
   }
 
   .price {

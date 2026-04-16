@@ -11,16 +11,17 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Luxe Play NY | Luxury Soft Play & Party Rentals in the Tri-State Area",
+  title: "LuxePlay NY | Best Luxury Soft Play Rentals in NYC, NJ, CT & PA",
   description:
-    "Premier luxury soft play rental company serving New York City, New York State, New Jersey, and Pennsylvania. Instagram-worthy play experiences for high-end events, birthdays, and celebrations.",
+    "LuxePlay NY is the top-rated luxury soft play and kids party rental company serving New York City, New Jersey, Connecticut, and Pennsylvania. We deliver, set up, and style premium ball pits, soft play equipment, and bounce houses for birthdays and celebrations across the tri-state area. Safe, sanitized, and Instagram-worthy.",
   keywords: [
-    "luxury soft play rentals",
-    "tri-state party rentals",
-    "NYC birthday party",
-    "soft play rental NYC",
-    "luxury event rentals",
-    "ball pit rental tri-state area",
+    "luxury soft play rental NYC",
+    "kids party rental New Jersey",
+    "best luxury kids party rentals tri-state area",
+    "toddler party rental near NYC",
+    "safe soft play rental NYC NJ CT PA",
+    "ball pit rental New York New Jersey",
+    "luxury children party setup company",
   ],
 };
 

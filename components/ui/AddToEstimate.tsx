@@ -37,7 +37,7 @@ export default function AddToEstimate({ item, requiresColor = false }: AddToEsti
                 disabled={disabled}
                 type="button"
             >
-                {inCart ? "Added ✓" : justAdded ? "Added ✓" : "Add to Estimate"}
+                {inCart ? "Added" : justAdded ? "Added" : "Add to Estimate"}
             </button>
         </div>
     );

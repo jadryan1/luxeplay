@@ -4,7 +4,7 @@ import ThemePageContent from "@/components/sections/ThemePageContent";
 export const metadata: Metadata = {
     title: "Riviera Party Setup | Luxe Play NY",
     description:
-        "See our Riviera event setup — Effortlessly sun-kissed. Undeniably luxe. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
+        "See our Riviera event setup. Effortlessly sun-kissed. Undeniably luxe. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
 };
 
 const images = [
@@ -37,10 +37,10 @@ export default function RivieraPage() {
             tagline="Effortlessly sun-kissed. Undeniably luxe."
             gender="Girls"
             heroColor="#F5DDE0"
-            description="Somewhere between a rosé lunch and a sunset swim. Blush florals, coral balloon walls, and cabana-style seating create a resort world that feels five-star. Coastal magic she'll play in — effortless taste you'll recognize."
+            description="Somewhere between a rosé lunch and a sunset swim. Blush florals, coral balloon walls, and cabana-style seating create a resort world that feels five-star. Coastal magic she'll play in with effortless taste you'll recognize."
             featuredItems={featuredItems}
             images={images}
-            ctaBody="Riviera is effortless luxury. We'd love to bring this coastal-chic setup — or your own custom vision — to your next event."
+            ctaBody="Riviera is effortless luxury. We'd love to bring this coastal-chic setup, or your own custom vision, to your next event."
         />
     );
 }

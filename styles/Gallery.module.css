@@ -34,7 +34,7 @@
 .gridItem {
   height: 320px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 0;
   position: relative;
 }
 

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -7,9 +8,9 @@ import Button from "@/components/ui/Button";
 import styles from "@/styles/AboutPage.module.css";
 
 export const metadata: Metadata = {
-  title: "About Us | Luxe Play NY",
+  title: "About LuxePlay NY | Luxury Kids Party Rental Company, NYC & Tri-State",
   description:
-    "Learn about Luxe Play NY, Manhattan's premier luxury soft play rental company. Our story, mission, and commitment to creating magical play experiences.",
+    "LuxePlay NY was founded by two moms who wanted better for their kids. We provide the safest, most beautiful luxury soft play and ball pit rentals for birthday parties and events across New York, New Jersey, Connecticut, and Pennsylvania.",
 };
 
 const values = [
@@ -57,10 +58,13 @@ export default function AboutPage() {
           <div className={styles.container}>
             <div className={styles.storyGrid}>
               <div className={styles.storyImage}>
-                <ImagePlaceholder
-                  width="100%"
-                  aspectRatio="4/5"
-                  borderRadius="var(--border-radius)"
+                <Image
+                  src="/assets/images/founders/founders_on_desk.jpeg"
+                  alt="LuxePlay NY founders at their desk"
+                  width={800}
+                  height={1000}
+                  className={styles.founderImage}
+                  sizes="(max-width: 767px) 100vw, 400px"
                 />
               </div>
               <div className={styles.storyContent}>

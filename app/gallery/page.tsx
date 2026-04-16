@@ -8,9 +8,9 @@ import styles from "@/styles/GalleryPage.module.css";
 
 export const metadata: Metadata = {
   title:
-    "Event Theme Lookbook | Luxe Play NY – Luxury Children's Party Rentals NYC",
+    "Themed Kids Party Setups | LuxePlay NY Lookbook | NYC, NJ, CT & PA",
   description:
-    "Browse Luxe Play NY's themed event lookbook. From Dino World to Royal Garden, every setup is custom-built for your child's celebration. Serving the tri-state area (NY, NJ, CT, PA).",
+    "Browse LuxePlay NY's luxury themed event setups. From Dino World to Royal Garden, each setup is custom-built and delivered across New York, New Jersey, Connecticut, and Pennsylvania. The best luxury children's party rental company in the tri-state area.",
 };
 
 const themes = [

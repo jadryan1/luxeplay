@@ -1,5 +1,4 @@
 .aboutPage {
-  padding-top: 160px;
 }
 
 .container {
@@ -35,13 +34,23 @@
 
 .storyGrid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.65fr 1.35fr;
   gap: 80px;
   align-items: center;
 }
 
 .storyImage {
-  max-width: 400px;
+  width: 100%;
+}
+
+.founderImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .storyContent h2 {
@@ -127,7 +136,7 @@
 
 @media (max-width: 1199px) {
   .storyGrid {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 0.65fr 1.35fr;
     gap: 48px;
   }
 
@@ -158,8 +167,8 @@
   }
 
   .storyImage {
-    max-width: 300px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
   }
 
   .valuesGrid {

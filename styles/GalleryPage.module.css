@@ -1,7 +1,6 @@
 /* Gallery Index Page — Event Theme Lookbook */
 
 .galleryPage {
-  padding-top: 160px;
 }
 
 .container {
@@ -46,7 +45,7 @@
 .card {
   position: relative;
   background-color: var(--color-white);
-  border-radius: var(--border-radius);
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   transition: transform var(--transition-default),
@@ -98,7 +97,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 6px 14px;
-  border-radius: 50px;
+  border-radius: 0;
   z-index: 1;
 }
 
@@ -167,7 +166,8 @@
 }
 
 .closingCtaBody {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-primary);
+  font-weight: 600;
   max-width: 520px;
   margin: 0 auto 36px;
   font-size: 1.0625rem;
@@ -184,7 +184,7 @@
   letter-spacing: 0.08em;
   background-color: var(--color-white);
   color: var(--color-gold);
-  border-radius: 50px;
+  border-radius: 0;
   text-decoration: none;
   transition: all var(--transition-default);
 }

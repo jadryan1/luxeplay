@@ -75,10 +75,10 @@
   display: inline-block;
   font-family: var(--font-raleway);
   font-size: 1rem;
-  color: var(--color-gold);
-  font-weight: 500;
-  background: #ffffff;
-  border-radius: 999px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  background: #f9c8d9;
+  border-radius: 0;
   padding: 6px 20px;
   margin-bottom: 16px;
 }

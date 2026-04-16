@@ -1,5 +1,4 @@
 import { Sparkles, Palette, Shield, HandMetal } from "lucide-react";
-import Eyebrow from "@/components/ui/Eyebrow";
 import Card from "@/components/ui/Card";
 import styles from "@/styles/WhyChooseUs.module.css";
 
@@ -35,8 +34,7 @@ export default function WhyChooseUs() {
     <section className={styles.whyChooseUs}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Eyebrow>THE LUXE DIFFERENCE</Eyebrow>
-          <h2>Why the Tri-State Area&apos;s Most Celebrated Families Choose Us</h2>
+          <h2>THE LUXE EXPERIENCE</h2>
         </div>
         <div className={styles.grid}>
           {features.map((feature, index) => (

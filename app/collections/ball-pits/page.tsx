@@ -37,7 +37,7 @@ export default function BallPitsPage() {
               <Eyebrow>CHOOSE YOUR SIZE</Eyebrow>
               <h2>Ball Pit Options</h2>
               <p className={styles.packagesSubtext}>
-                Four sizes to fit any space — from intimate gatherings to grand celebrations
+                Four sizes to fit any space, from intimate gatherings to grand celebrations.
               </p>
             </div>
             <div className={styles.packagesGrid}>
@@ -136,7 +136,7 @@ export default function BallPitsPage() {
             <h2>Ready for the Luxe Experience?</h2>
             <p>
               Let&apos;s design the perfect play experience for your event.
-              Most inquiries answered within 2 hours.
+              Inquiries answered within 24 hours.
             </p>
             <div className={styles.ctaButtons}>
               <a href="/contact" className={styles.ctaLink}>

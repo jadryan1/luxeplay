@@ -140,7 +140,6 @@ export const elitePackages: Product[] = [
         price: 2450,
         priceLabel: "$2,450",
         category: "elite",
-        savings: "Save $100",
         colors: [],
         includes: [
             "5ft Ball Pit",
@@ -156,7 +155,6 @@ export const elitePackages: Product[] = [
         price: 2650,
         priceLabel: "$2,650",
         category: "elite",
-        savings: "Save $100",
         colors: [],
         includes: [
             "10x6 Ball Pit",
@@ -188,7 +186,6 @@ export const elitePackages: Product[] = [
         price: 3250,
         priceLabel: "$3,250",
         category: "elite",
-        savings: "Save $125",
         colors: [],
         includes: [
             "10x13 Ball Pit",

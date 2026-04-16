@@ -1,5 +1,4 @@
 .servicePage {
-  padding-top: 160px;
 }
 
 .container {
@@ -10,13 +9,15 @@
 
 /* Hero */
 .hero {
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
+  background-color: var(--color-section-break);
 }
 
 .hero h1 {
   max-width: 700px;
   margin: 0 auto 20px;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .heroSubtitle {
@@ -30,10 +31,10 @@
   display: inline-block;
   font-family: var(--font-raleway);
   font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--color-gold);
-  background: #ffffff;
-  border-radius: 999px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: #f9c8d9;
+  border-radius: 0;
   padding: 6px 20px;
 }
 
@@ -215,7 +216,7 @@
 }
 
 .cta>.container>p {
-  color: rgba(255, 255, 255, 0.9);
+  color: #3D2E2E;
   max-width: 500px;
   margin: 0 auto 32px;
 }
@@ -244,7 +245,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 0;
   z-index: 1;
 }
 
@@ -257,7 +258,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   padding: 4px 10px;
-  border-radius: 12px;
+  border-radius: 0;
   margin-left: 8px;
 }
 
@@ -274,7 +275,7 @@
   margin-top: 40px;
   padding: 24px;
   background-color: var(--color-light-pink);
-  border-radius: var(--border-radius);
+  border-radius: 0;
   text-align: center;
 }
 
@@ -287,7 +288,7 @@
 }
 
 .comboPrice {
-  color: var(--color-gold);
+  color: var(--color-text-primary);
   font-weight: 600;
 }
 
@@ -307,8 +308,9 @@
 }
 
 .ctaLink:hover {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
+  background-color: #3D2E2E;
+  border-color: #3D2E2E;
+  color: #FFFFFF;
 }
 
 .ctaLinkSecondary {
@@ -319,15 +321,16 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: none;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   padding: 14px 32px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-text-primary);
   transition: all 0.3s ease;
 }
 
 .ctaLinkSecondary:hover {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
+  background-color: #3D2E2E;
+  border-color: #3D2E2E;
+  color: #FFFFFF;
 }
 
 @media (max-width: 1199px) {
@@ -342,7 +345,6 @@
 
 @media (max-width: 767px) {
   .servicePage {
-    padding-top: 0;
   }
 
   .container {
@@ -350,10 +352,19 @@
   }
 
   .hero {
-    padding: 60px 0;
+    padding: 48px 0 44px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.375rem, 5.5vw, 2.5rem);
+  }
+
+  .heroSubtitle {
+    font-size: 0.9375rem;
   }
 
   .heroPrice {
+    font-size: 1rem;
     display: inline-block;
     width: auto;
     max-width: fit-content;

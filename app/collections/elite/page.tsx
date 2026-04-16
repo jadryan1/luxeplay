@@ -20,9 +20,9 @@ export default function ElitePackagesPage() {
             <h1>The All-Exclusive Experience</h1>
             <p className={styles.heroSubtitle}>
               Get the full Luxe Play experience at special bundled pricing.
-              Ball pit, soft play, personalization, and toddler bounce — all included.
+              Ball pit, soft play, personalization, and toddler bounce are all included.
             </p>
-            <p className={styles.heroPrice}>Starting at $2,450 • Save up to $125</p>
+            <p className={styles.heroPrice}>Starting at $2,450</p>
           </div>
         </section>
 
@@ -33,7 +33,7 @@ export default function ElitePackagesPage() {
               <Eyebrow>CHOOSE YOUR ELITE PACKAGE</Eyebrow>
               <h2>Elite Packages</h2>
               <p className={styles.packagesSubtext}>
-                Save money and get the complete Luxe Play experience
+                The complete Luxe Play experience in one seamless booking
               </p>
             </div>
             <div className={styles.packagesGrid}>
@@ -52,9 +52,6 @@ export default function ElitePackagesPage() {
                     <h3 className={styles.packageName}>{pkg.name}</h3>
                     <p className={styles.packagePrice}>
                       {pkg.priceLabel}
-                      {pkg.savings && (
-                        <span className={styles.savingsBadge}>{pkg.savings}</span>
-                      )}
                     </p>
                     <div className={styles.packageDetails}>
                       <div className={styles.detailRow}>
@@ -64,7 +61,7 @@ export default function ElitePackagesPage() {
                       {pkg.includes?.map((item, i) => (
                         <div key={i} className={styles.detailRow}>
                           <span className={styles.detailValue} style={{ paddingLeft: "8px" }}>
-                            ✓ {item}
+                            {item}
                           </span>
                         </div>
                       ))}
@@ -109,10 +106,9 @@ export default function ElitePackagesPage() {
                 <p>
                   Our Elite packages bundle together our most popular services at special
                   pricing. You get the ball pit, soft play equipment, personalized touches,
-                  and toddler bounce house — all in one seamless booking.
+                  and toddler bounce house, all in one seamless booking.
                 </p>
                 <ul className={styles.includedList}>
-                  <li>Save $100-$125 vs. booking separately</li>
                   <li>One booking, one delivery, one setup</li>
                   <li>Custom personalization included</li>
                   <li>Perfect for milestone celebrations</li>
@@ -137,7 +133,7 @@ export default function ElitePackagesPage() {
             <h2>Ready to Experience Elite?</h2>
             <p>
               Let&apos;s design the perfect play experience for your event.
-              Most inquiries answered within 2 hours.
+              Inquiries answered within 24 hours.
             </p>
             <div className={styles.ctaButtons}>
               <a href="/contact" className={styles.ctaLink}>

@@ -1,0 +1,139 @@
+/* Brand Statement — LuxePlay NY homepage value proposition */
+
+.section {
+  background-color: var(--color-warm-tan); /* #F5EDE6 — nearest site taupe */
+  padding: 80px 40px;
+}
+
+.inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* editorial left-aligned within the centered column */
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: block;
+  font-family: var(--font-raleway);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+/* Headline — two-line mixed italic/regular */
+.headline {
+  font-family: var(--font-raleway);
+  font-size: 3rem;
+  font-weight: 400; /* regular weight */
+  text-transform: none;
+  letter-spacing: 0.04em;
+  color: var(--color-text-primary);
+  margin-bottom: 36px;
+  line-height: 1.25;
+}
+
+.headlineItalic {
+  display: block;
+  font-style: italic;
+}
+
+/* Body paragraphs */
+.body {
+  font-family: var(--font-raleway);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+  max-width: 100%;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+/* Bullet list */
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 32px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bullets li {
+  font-family: var(--font-raleway);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+/* Closing service area line */
+.closing {
+  font-family: var(--font-raleway);
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  opacity: 0.75;
+  margin-top: 16px;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+/* CTA button */
+.cta {
+  display: inline-block;
+  font-family: var(--font-raleway);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 2px solid var(--color-text-primary);
+  padding: 18px 56px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 24px;
+  align-self: center;
+}
+
+.cta:hover {
+  background: var(--color-text-primary);
+  color: var(--color-warm-tan);
+  transform: translateY(-2px);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 24px;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+
+  .body {
+    font-size: 1rem;
+  }
+
+  .bullets li {
+    font-size: 0.9375rem;
+  }
+
+  .closing {
+    font-size: 0.85rem;
+  }
+}

@@ -35,7 +35,6 @@ export default function Hygiene() {
           <ul className={styles.list}>
             {hygienePoints.map((point, index) => (
               <li key={index}>
-                <span className={styles.sparkle}>✨</span>
                 {point}
               </li>
             ))}

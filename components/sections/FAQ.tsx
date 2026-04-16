@@ -11,7 +11,7 @@ const faqItems = [
   {
     question: "What is your service area?",
     answer:
-      "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania — anywhere within a 3-hour radius of Fairfield, NJ.",
+      "New York City, Westchester, Long Island, New Jersey, Connecticut, and eastern Pennsylvania. We serve anywhere within a 3-hour radius of Fairfield, NJ.",
   },
   {
     question: "What's included in the rental?",
@@ -36,7 +36,7 @@ const faqItems = [
   {
     question: "Do you offer styling services?",
     answer:
-      "Yes! Basic styling is included with every rental—we ensure your setup looks Instagram-perfect. For clients wanting an elevated experience, we offer premium styling packages that include custom balloon arrangements, coordinated accessories, and design consultation with our creative team.",
+      "Yes! Basic styling is included with every rental. We ensure your setup looks Instagram-perfect. For clients wanting an elevated experience, we offer premium styling packages that include custom balloon arrangements, coordinated accessories, and design consultation with our creative team.",
   },
   {
     question: "Is setup and breakdown included?",

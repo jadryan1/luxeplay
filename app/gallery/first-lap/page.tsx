@@ -4,7 +4,7 @@ import ThemePageContent from "@/components/sections/ThemePageContent";
 export const metadata: Metadata = {
     title: "First Lap Party Setup | Luxe Play NY",
     description:
-        "See our First Lap event setup — Speed, style, and a celebration worth remembering. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
+        "See our First Lap event setup. Speed, style, and a celebration worth remembering. Custom luxury children's party rentals by Luxe Play NY, serving NYC and surrounding areas.",
 };
 
 const images = [
@@ -35,10 +35,10 @@ export default function FirstLapPage() {
             tagline="Speed, style, and a celebration worth remembering."
             gender="Boys"
             heroColor="#D4E5ED"
-            description="The starting line of something unforgettable. Custom checkered arches and a powder-blue pit lane set the tone — fast, sleek, and impossibly polished. Speed he'll remember, style you'll want to frame."
+            description="The starting line of something unforgettable. Custom checkered arches and a powder-blue pit lane set the tone, fast, sleek, and impossibly polished. Speed he'll remember, style you'll want to frame."
             featuredItems={featuredItems}
             images={images}
-            ctaBody="First Lap is built for speed and style. We'd love to bring this setup — or something entirely custom — to your next celebration."
+            ctaBody="First Lap is built for speed and style. We'd love to bring this setup, or something entirely custom, to your next celebration."
         />
     );
 }

@@ -3,7 +3,7 @@
    =================================== */
 
 .wrapper {
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 160px 24px 40px;
     min-height: 100vh;
@@ -36,10 +36,11 @@
 .stepIndicator {
     font-family: var(--font-raleway);
     font-size: 0.75rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--color-text-primary);
+    font-weight: 500;
     margin-bottom: 48px;
 }
 
@@ -90,7 +91,7 @@
 .question {
     font-family: var(--font-raleway);
     font-size: 1.75rem;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 0.02em;
     color: var(--color-text-primary);
     margin-bottom: 32px;
@@ -103,11 +104,11 @@
     padding: 16px 0;
     font-family: var(--font-raleway);
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #3D2E2E;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #F5EDE8;
+    border-bottom: 1px solid #666;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -166,11 +167,11 @@
 .chip {
     font-family: var(--font-raleway);
     font-size: 0.875rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.04em;
     padding: 12px 24px;
-    border: 1px solid #F5EDE8;
-    border-radius: 100px;
+    border: 1px solid #666;
+    border-radius: 0;
     background: transparent;
     color: #3D2E2E;
     cursor: pointer;
@@ -194,11 +195,11 @@
     padding: 16px 0;
     font-family: var(--font-raleway);
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #3D2E2E;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #F5EDE8;
+    border-bottom: 1px solid #666;
     outline: none;
     transition: border-color 0.3s ease;
     cursor: pointer;
@@ -223,8 +224,8 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    font-weight: 200;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    border: 1px solid #666;
     background: white;
     color: var(--color-text-primary);
     cursor: pointer;
@@ -232,11 +233,11 @@
 }
 
 .numberBtn:first-child {
-    border-radius: 8px 0 0 8px;
+    border-radius: 0;
 }
 
 .numberBtn:last-child {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0;
 }
 
 .numberBtn:hover {
@@ -250,8 +251,8 @@
     text-align: center;
     font-family: var(--font-raleway);
     font-size: 1.25rem;
-    font-weight: 300;
-    border: 1px solid #F5EDE8;
+    font-weight: 400;
+    border: 1px solid #666;
     border-left: none;
     border-right: none;
     background: transparent;
@@ -279,7 +280,7 @@
     align-items: center;
     gap: 12px;
     padding: 14px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid #666;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -300,7 +301,7 @@
 .checkboxText {
     font-family: var(--font-raleway);
     font-size: 0.9375rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color-text-primary);
 }
 
@@ -310,11 +311,11 @@
     padding: 16px 0;
     font-family: var(--font-raleway);
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #3D2E2E;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #F5EDE8;
+    border-bottom: 1px solid #666;
     outline: none;
     resize: vertical;
     min-height: 120px;
@@ -347,10 +348,10 @@
     gap: 4px;
     font-family: var(--font-raleway);
     font-size: 0.8125rem;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--color-text-secondary);
     background: none;
     border: none;
     cursor: pointer;
@@ -365,14 +366,14 @@
 .continueBtn {
     font-family: var(--font-raleway);
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #3D2E2E;
     background: #FDCBE2;
     border: none;
     padding: 12px 32px;
-    border-radius: 50px;
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -408,7 +409,7 @@
 .logoLuxe {
     font-family: var(--font-raleway);
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.2em;
     color: var(--color-text-primary);
 }
@@ -416,15 +417,15 @@
 .logoPlay {
     font-family: var(--font-raleway);
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0.2em;
-    color: #FDCBE2;
+    color: var(--color-text-secondary);
 }
 
 .confirmTitle {
     font-family: var(--font-raleway);
     font-size: 1.75rem;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0.04em;
     color: var(--color-text-primary);
     margin-bottom: 16px;
@@ -433,7 +434,7 @@
 .confirmText {
     font-family: var(--font-raleway);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color-text-secondary);
     max-width: 400px;
     line-height: 1.6;
@@ -449,8 +450,8 @@
 .confirmSubtext {
     font-family: var(--font-raleway);
     font-size: 0.875rem;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.35);
+    font-weight: 500;
+    color: var(--color-text-secondary);
 }
 
 .confirmSubtext strong {
